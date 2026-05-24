@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #222;
+}
+
+.admin-main {
+  padding: 30px 16px;
+}
+
+.admin-card {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  border: 2px solid #ffd700;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.admin-toolbar {
+  margin: 18px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.admin-toolbar a {
+  color: #8134af;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.admin-note {
+  margin: 0 0 18px;
+  font-size: 14px;
+  color: #555;
+}

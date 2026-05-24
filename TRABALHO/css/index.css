@@ -1,0 +1,1318 @@
+
+/* ========================================
+    ESTILOS DA PÁGINA INDEX.HTML
+    Base compartilhada importada de estilo.css
+    ======================================== */
+@import url('./estilo.css');
+
+/* ========================================
+    ESTILOS GERAIS - PÁGINA PRINCIPAL (INDEX.HTML)
+    Cores principais: Amarelo (#FFD700), Preto (#000000), Branco (#FFFFFF)
+    ======================================== */
+
+/* ========================================
+    RESET E CONFIGURAÇÕES GLOBAIS
+    ======================================== */
+
+/* Remove margens e padding padrão de todos os elementos */
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+/* Define estilos globais para o corpo da página */
+body {
+     /* Define a fonte padrão para toda a página */
+     font-family: 'Arial', sans-serif;
+     
+     /* Define a cor de fundo como branco */
+     background-color: #FFFFFF;
+     
+     /* Define a cor do texto como preto */
+     color: #000000;
+     
+     /* Define a altura mínima para ocupar toda a viewport */
+     min-height: 100vh;
+     
+     /* Exibe o corpo como flex para organizar elementos filhos */
+     display: flex;
+     
+     /* Organiza os elementos em coluna vertical */
+ flex-direction: column;
+}
+
+.admin-access-trigger {
+     background: transparent;
+     border: 1px solid #FFD700;
+     color: #FFD700;
+     border-radius: 6px;
+     padding: 8px 12px;
+     cursor: pointer;
+     font-size: 14px;
+}
+
+.admin-access-trigger:hover {
+     background: #FFD700;
+     color: #000;
+}
+
+/* ========================================
+    CONTAINER - CLASSE REUTILIZÁVEL
+    ======================================== */
+
+/* Container centraliza o conteúdo e define largura máxima */
+.container {
+     /* Define largura máxima do container */
+     max-width: 1200px;
+     
+     /* Centraliza o container horizontalmente */
+     margin: 0 auto;
+     
+     /* Adiciona espaçamento interno horizontal */
+     padding: 0 20px;
+     
+     /* Exibe como flex para organizar elementos filhos */
+     display: flex;
+     
+     /* Alinha elementos verticalmente ao centro */
+     align-items: center;
+     
+     /* Distribui espaço entre elementos */
+     justify-content: space-between;
+     
+     /* Define largura total */
+     width: 100%;
+}
+
+/* ========================================
+    CABEÇALHO (HEADER)
+    ======================================== */
+
+/* Estilo do cabeçalho da página */
+.header {
+     /* Define cor de fundo como preto */
+     background-color: #000000;
+     
+     /* Define cor do texto como branco */
+     color: #FFFFFF;
+     
+     /* Adiciona espaçamento interno vertical */
+     padding: 20px 0;
+     
+     /* Adiciona sombra ao cabeçalho */
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo do logo (ADHC) no cabeçalho */
+.logo {
+     /* Define tamanho da fonte */
+     font-size: 28px;
+     
+     /* Define peso da fonte como bold */
+     font-weight: bold;
+     
+     /* Define cor como amarelo */
+     color: #FFD700;
+     
+     /* Remove margens padrão */
+     margin: 0;
+}
+
+/* ========================================
+    NAVEGAÇÃO (NAV)
+    ======================================== */
+
+/* Estilo da barra de navegação */
+.nav {
+     /* Exibe como flex para organizar links horizontalmente */
+     display: flex;
+     
+     /* Define espaçamento entre links */
+     gap: 30px;
+}
+
+/* Estilo dos links de navegação */
+.nav-link {
+     /* Define cor do texto como branco */
+     color: #FFFFFF;
+     
+     /* Remove a decoração padrão de links */
+     text-decoration: none;
+     
+     /* Define tamanho da fonte */
+     font-size: 16px;
+     
+     /* Define transição suave para hover */
+     transition: color 0.3s ease;
+}
+
+/* Efeito ao passar o mouse sobre links de navegação */
+.nav-link:hover {
+     /* Muda a cor para amarelo ao passar o mouse */
+     color: #FFD700;
+}
+
+/* Estilo do link ativo (página atual) */
+.nav-link.active {
+     /* Define cor como amarelo para indicar página ativa */
+     color: #FFD700;
+     
+     /* Adiciona borda inferior para destacar */
+     border-bottom: 2px solid #FFD700;
+     
+     /* Adiciona padding para espaçar a borda */
+     padding-bottom: 5px;
+}
+
+/* ========================================
+    SEÇÃO PRINCIPAL (MAIN)
+    ======================================== */
+
+/* Estilo da seção principal */
+.main {
+     /* Faz a seção crescer para ocupar espaço disponível */
+     flex: 1;
+     
+     /* Define largura total */
+     width: 100%;
+}
+
+/* ========================================
+    SEÇÃO HERO (APRESENTAÇÃO)
+    ======================================== */
+
+/* Estilo da seção hero (banner principal) */
+.hero {
+     /* Define cor de fundo como preto */
+     background-color: #000000;
+     
+     /* Define cor do texto como branco */
+     color: #FFFFFF;
+     
+     /* Define altura mínima */
+     min-height: 400px;
+     
+     /* Exibe como flex para organizar conteúdo em linha */
+     display: flex;
+     
+     /* Organiza elementos em linha */
+     flex-direction: row;
+     
+     /* Distribui espaço entre elementos */
+     justify-content: space-around;
+     
+     /* Centraliza conteúdo verticalmente */
+     align-items: center;
+     
+     /* Adiciona espaçamento interno */
+     padding: 60px 20px;
+     
+     /* Define espaçamento entre elementos */
+     gap: 40px;
+}
+
+/* Estilo do conteúdo dentro da seção hero */
+.hero-content {
+     /* Exibe como flex para organizar elementos em coluna */
+     display: flex;
+     
+     /* Organiza elementos em coluna vertical */
+     flex-direction: column;
+     
+     /* Centraliza elementos horizontalmente */
+     align-items: center;
+     
+     /* Define espaçamento entre elementos */
+     gap: 20px;
+     
+     /* Define largura máxima */
+     flex: 1;
+}
+
+/* Estilo do logo no hero */
+.hero-logo {
+     /* Exibe como flex para centralizar a imagem */
+     display: flex;
+     
+     /* Centraliza a imagem */
+     justify-content: center;
+     
+     /* Centraliza a imagem verticalmente */
+     align-items: center;
+}
+
+/* Estilo da imagem do logo */
+.logo-img {
+     /* Define largura máxima da imagem */
+     max-width: 120px;
+     
+     /* Define altura automática */
+     height: auto;
+     
+     /* Define display como bloco */
+     display: block;
+}
+
+/* Estilo do mascote no hero */
+.hero-mascote {
+     /* Exibe como flex para centralizar a imagem */
+     display: flex;
+     
+     /* Centraliza a imagem */
+     justify-content: center;
+     
+     /* Centraliza a imagem verticalmente */
+     align-items: center;
+}
+
+/* Estilo da imagem do mascote */
+.mascote-img {
+     /* Define largura máxima da imagem */
+     max-width: 300px;
+     
+     /* Define altura automática */
+     height: auto;
+     
+     /* Define display como bloco */
+     display: block;
+     
+     /* Define transição suave */
+     transition: transform 0.3s ease;
+}
+
+/* Efeito ao passar o mouse sobre o mascote */
+.mascote-img:hover {
+     /* Aumenta o mascote levemente */
+     transform: scale(1.05);
+}
+
+/* Estilo do título da seção hero */
+.hero-title {
+     /* Define tamanho da fonte */
+     font-size: 48px;
+     
+     /* Define peso da fonte */
+     font-weight: bold;
+     
+     /* Define cor como amarelo */
+     color: #FFD700;
+}
+
+/* Estilo do subtítulo da seção hero */
+.hero-subtitle {
+     /* Define tamanho da fonte */
+     font-size: 24px;
+     
+     /* Define cor como branco */
+     color: #FFFFFF;
+}
+
+/* ========================================
+    SEÇÃO DE INFORMAÇÕES
+    ======================================== */
+
+/* Estilo da seção de informações */
+.info-section {
+     /* Define cor de fundo como branco */
+     background-color: #FFFFFF;
+     
+     /* Adiciona espaçamento interno vertical */
+     padding: 60px 0;
+}
+
+/* Estilo do título da seção */
+.section-title {
+     /* Define tamanho da fonte */
+     font-size: 36px;
+     
+     /* Define peso da fonte */
+     font-weight: bold;
+     
+     /* Define cor como preto */
+     color: #000000;
+     
+     /* Centraliza o texto */
+     text-align: center;
+     
+     /* Adiciona espaçamento inferior */
+     margin-bottom: 40px;
+}
+
+/* Estilo do grid de informações */
+.info-grid {
+     /* Exibe como flex para organizar cards */
+     display: flex;
+     
+     /* Organiza cards em linha */
+     flex-direction: row;
+     
+     /* Distribui espaço entre cards */
+     justify-content: space-around;
+     
+     /* Centraliza cards verticalmente */
+     align-items: center;
+     
+     /* Define espaçamento entre cards */
+     gap: 30px;
+     
+     /* Faz cards quebrar em múltiplas linhas se necessário */
+     flex-wrap: wrap;
+}
+
+/* Estilo dos cards de informação */
+.info-card {
+     /* Define largura do card */
+     width: 250px;
+     
+     /* Define cor de fundo como branco */
+     background-color: #FFFFFF;
+     
+     /* Adiciona borda */
+     border: 2px solid #FFD700;
+     
+     /* Adiciona espaçamento interno */
+     padding: 30px;
+     
+     /* Centraliza o texto */
+     text-align: center;
+     
+     /* Adiciona borda arredondada */
+     border-radius: 8px;
+     
+     /* Adiciona sombra ao card */
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     
+     /* Define transição suave para hover */
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito ao passar o mouse sobre cards */
+.info-card:hover {
+     /* Aumenta o card levemente */
+     transform: translateY(-5px);
+     
+     /* Aumenta a sombra */
+     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo do título do card */
+.info-card h3 {
+     /* Define tamanho da fonte */
+     font-size: 20px;
+     
+     /* Define cor como amarelo */
+     color: #FFD700;
+     
+     /* Adiciona espaçamento inferior */
+     margin-bottom: 15px;
+}
+
+/* Estilo do parágrafo dentro do card */
+.info-card p {
+     /* Define tamanho da fonte */
+     font-size: 16px;
+     
+     /* Define altura da linha para melhor legibilidade */
+     line-height: 1.6;
+}
+
+/* ========================================
+    SEÇÃO DE CHAMADA PARA AÇÃO (CTA)
+    ======================================== */
+
+/* Estilo da seção de chamada para ação */
+.cta-section {
+     /* Define cor de fundo como preto */
+     background-color: #000000;
+     
+     /* Define cor do texto como branco */
+     color: #FFFFFF;
+     
+     /* Adiciona espaçamento interno vertical */
+     padding: 60px 20px;
+}
+
+/* Estilo do container dentro da seção CTA */
+.cta-section .container {
+     /* Organiza elementos em coluna */
+     flex-direction: column;
+     
+     /* Centraliza elementos */
+     align-items: center;
+     
+     /* Define espaçamento entre elementos */
+     gap: 20px;
+}
+
+/* Estilo do título da seção CTA */
+.cta-title {
+     /* Define tamanho da fonte */
+     font-size: 32px;
+     
+     /* Define peso da fonte */
+     font-weight: bold;
+     
+     /* Define cor como amarelo */
+     color: #FFD700;
+}
+
+/* Estilo do texto da seção CTA */
+.cta-text {
+     /* Define tamanho da fonte */
+     font-size: 18px;
+     
+     /* Define cor como branco */
+     color: #FFFFFF;
+}
+
+/* Estilo do botão de chamada para ação */
+.cta-button {
+     /* Define cor de fundo como amarelo */
+     background-color: #FFD700;
+     
+     /* Define cor do texto como preto */
+     color: #000000;
+     
+     /* Remove a decoração padrão de links */
+     text-decoration: none;
+     
+     /* Adiciona espaçamento interno */
+     padding: 15px 40px;
+     
+     /* Define tamanho da fonte */
+     font-size: 18px;
+     
+     /* Define peso da fonte */
+     font-weight: bold;
+     
+     /* Adiciona borda arredondada */
+     border-radius: 5px;
+     
+     /* Define transição suave para hover */
+     transition: background-color 0.3s ease, transform 0.3s ease;
+     
+     /* Exibe como bloco inline para funcionar como botão */
+     display: inline-block;
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+.cta-button:hover {
+     /* Muda a cor de fundo para um tom mais escuro de amarelo */
+     background-color: #FFC700;
+     
+     /* Aumenta o botão levemente */
+     transform: scale(1.05);
+}
+
+/* ========================================
+    RODAPÉ (FOOTER)
+    ======================================== */
+
+/* Estilo do rodapé */
+.footer {
+     /* Define cor de fundo como preto */
+     background-color: #000000;
+     
+     /* Define cor do texto como branco */
+     color: #FFFFFF;
+     
+     /* Adiciona espaçamento interno vertical */
+     padding: 20px 0;
+     
+     /* Centraliza o texto */
+     text-align: center;
+     
+     /* Adiciona borda superior */
+     border-top: 2px solid #FFD700;
+}
+
+/* Estilo do parágrafo dentro do rodapé */
+.footer p {
+     /* Define tamanho da fonte */
+     font-size: 14px;
+     
+     /* Remove margens padrão */
+     margin: 0;
+}
+
+/* ========================================
+    RESPONSIVIDADE - TELAS PEQUENAS
+    ======================================== */
+
+/* Media query para telas menores que 768px */
+@media (max-width: 768px) {
+     /* Ajusta o container para telas pequenas */
+     .container {
+          /* Organiza elementos em coluna */
+          flex-direction: column;
+          
+          /* Centraliza elementos */
+          align-items: center;
+     }
+
+     /* Ajusta o header para telas pequenas */
+     .header .container {
+          /* Organiza elementos em coluna */
+          flex-direction: column;
+          
+          /* Define espaçamento entre elementos */
+          gap: 15px;
+     }
+
+     /* Ajusta a navegação para telas pequenas */
+     .nav {
+          /* Reduz o espaçamento entre links */
+          gap: 15px;
+     }
+
+     /* Ajusta o hero para telas pequenas */
+     .hero {
+          /* Reduz a altura mínima */
+          min-height: 300px;
+          
+          /* Reduz o padding */
+          padding: 40px 20px;
+     }
+
+     /* Ajusta o título do hero para telas pequenas */
+     .hero-title {
+          /* Reduz o tamanho da fonte */
+          font-size: 32px;
+     }
+
+     /* Ajusta o subtítulo do hero para telas pequenas */
+     .hero-subtitle {
+          /* Reduz o tamanho da fonte */
+          font-size: 18px;
+     }
+
+     /* Ajusta o título da seção para telas pequenas */
+     .section-title {
+          /* Reduz o tamanho da fonte */
+          font-size: 24px;
+     }
+
+     /* Ajusta o grid de informações para telas pequenas */
+     .info-grid {
+          /* Organiza cards em coluna */
+          flex-direction: column;
+          
+          /* Centraliza cards */
+          align-items: center;
+     }
+
+     /* Ajusta o card de informação para telas pequenas */
+     .info-card {
+          /* Define largura total */
+          width: 100%;
+          
+          /* Define largura máxima */
+          max-width: 300px;
+     }
+
+     /* Ajusta o título da seção CTA para telas pequenas */
+     .cta-title {
+          /* Reduz o tamanho da fonte */
+          font-size: 24px;
+     }
+
+     /* Ajusta o texto da seção CTA para telas pequenas */
+     .cta-text {
+          /* Reduz o tamanho da fonte */
+          font-size: 16px;
+     }
+
+     @media (max-width: 480px) {
+    .nav-link {
+        font-size: 14px;
+        padding: 6px 8px;
+    }
+
+    .hero {
+        padding: 30px 16px;
+    }
+
+    .hero-title {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .hero-subtitle {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+
+    .cta-button,
+    .about-project-button {
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+    }
+}
+
+}
+
+
+/* ========================================
+    SEÇÃO DE NOTÍCIAS E DESTAQUES
+    ======================================== */
+
+/* Estilo da seção de notícias */
+.news-section {
+     /* Define cor de fundo como branco */
+     background-color: #FFFFFF;
+     
+     /* Adiciona espaçamento interno vertical */
+     padding: 60px 0;
+}
+
+/* Estilo do grid de notícias */
+.news-grid {
+     /* Exibe como flex para organizar cards */
+     display: flex;
+     
+     /* Organiza cards em linha */
+     flex-direction: row;
+     
+     /* Distribui espaço entre cards */
+     justify-content: space-around;
+     
+     /* Centraliza cards verticalmente */
+     align-items: stretch;
+     
+     /* Define espaçamento entre cards */
+     gap: 30px;
+     
+     /* Faz cards quebrar em múltiplas linhas se necessário */
+     flex-wrap: wrap;
+}
+
+/* Estilo dos cards de notícia */
+.news-card {
+     /* Define largura do card */
+     width: 300px;
+     
+     /* Define cor de fundo como branco */
+     background-color: #FFFFFF;
+     
+     /* Adiciona borda */
+     border: 2px solid #FFD700;
+     
+     /* Adiciona espaçamento interno */
+     padding: 25px;
+     
+     /* Adiciona borda arredondada */
+     border-radius: 8px;
+     
+     /* Adiciona sombra ao card */
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     
+     /* Define transição suave para hover */
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     
+     /* Exibe como flex para organizar elementos em coluna */
+     display: flex;
+     
+     /* Organiza elementos em coluna vertical */
+     flex-direction: column;
+     
+     /* Define espaçamento entre elementos */
+     gap: 15px;
+}
+
+/* Efeito ao passar o mouse sobre cards de notícia */
+.news-card:hover {
+     /* Aumenta o card levemente */
+     transform: translateY(-8px);
+     
+     /* Aumenta a sombra */
+     box-shadow: 0 8px 16px rgba(255, 215, 0, 0.3);
+}
+
+/* Estilo da data da notícia */
+.news-date {
+     /* Define cor como amarelo */
+     color: #FFD700;
+     
+     /* Define tamanho da fonte */
+     font-size: 14px;
+     
+     /* Define peso da fonte */
+     font-weight: bold;
+     
+     /* Converte texto para maiúsculas */
+     text-transform: uppercase;
+}
+
+/* Estilo do título da notícia */
+.news-title {
+     /* Define tamanho da fonte */
+     font-size: 20px;
+     
+     /* Define peso da fonte */
+     font-weight: bold;
+     
+     /* Define cor como preto */
+     color: #000000;
+     
+     /* Remove margens padrão */
+     margin: 0;
+}
+
+/* Estilo da descrição da notícia */
+.news-description {
+     /* Define tamanho da fonte */
+     font-size: 14px;
+     
+     /* Define cor como preto */
+     color: #000000;
+     
+     /* Define altura da linha para melhor legibilidade */
+     line-height: 1.6;
+     
+     /* Remove margens padrão */
+     margin: 0;
+     
+     /* Faz o elemento crescer para ocupar espaço disponível */
+     flex: 1;
+}
+
+/* Estilo do link de notícia */
+.news-link {
+     /* Define cor como amarelo */
+     color: #FFD700;
+     
+     /* Remove a decoração padrão de links */
+     text-decoration: none;
+     
+     /* Define tamanho da fonte */
+     font-size: 14px;
+     
+     /* Define peso da fonte */
+     font-weight: bold;
+     
+     /* Define transição suave para hover */
+     transition: color 0.3s ease;
+}
+
+/* Efeito ao passar o mouse sobre link de notícia */
+.news-link:hover {
+     /* Muda a cor para um tom mais escuro de amarelo */
+     color: #FFC700;
+}
+
+/* ========================================
+    SEÇÃO DE PATROCINADORES
+    ======================================== */
+
+/* Estilo da seção de patrocinadores */
+.sponsors-section {
+     /* Define cor de fundo como preto */
+     background-color: #000000;
+     
+     /* Define cor do texto como branco */
+     color: #FFFFFF;
+     
+     /* Adiciona espaçamento interno vertical */
+     padding: 60px 0;
+}
+
+/* Estilo do container dentro da seção de patrocinadores */
+.sponsors-section .container {
+     /* Organiza elementos em coluna */
+     flex-direction: column;
+     
+     /* Centraliza elementos */
+     align-items: center;
+     
+     /* Define espaçamento entre elementos */
+     gap: 20px;
+}
+
+.sponsors-section .section-title{
+color: #FFFFFF;
+}
+/* Estilo do subtítulo de patrocinadores */
+.sponsors-subtitle {
+     /* Define tamanho da fonte */
+     font-size: 16px;
+     
+     /* Define cor como branco */
+     color: #FFFFFF;
+     
+     /* Centraliza o texto */
+     text-align: center;
+     
+     /* Adiciona espaçamento inferior */
+     margin-bottom: 30px;
+}
+
+/* Estilo do grid de patrocinadores */
+.sponsors-grid {
+     /* Exibe como flex para organizar cards */
+     display: flex;
+     
+     /* Organiza cards em linha */
+     flex-direction: row;
+     
+     /* Distribui espaço entre cards */
+     justify-content: space-around;
+     
+     /* Centraliza cards verticalmente */
+     align-items: center;
+     
+     /* Define espaçamento entre cards */
+     gap: 30px;
+     
+     /* Faz cards quebrar em múltiplas linhas se necessário */
+     flex-wrap: wrap;
+     
+     /* Define largura total */
+     width: 100%;
+}
+
+/* Estilo dos cards de patrocinador */
+.sponsor-card {
+     /* Define largura do card */
+     width: 200px;
+     
+     /* Define altura do card */
+     height: 150px;
+     
+     /* Define cor de fundo como branco */
+     background-color: #FFFFFF;
+     
+     /* Adiciona borda */
+     border: 2px solid #FFD700;
+     
+     /* Adiciona espaçamento interno */
+     padding: 20px;
+     
+     /* Adiciona borda arredondada */
+     border-radius: 8px;
+     
+     /* Exibe como flex para centralizar conteúdo */
+     display: flex;
+     
+     /* Organiza elementos em coluna */
+     flex-direction: column;
+     
+     /* Centraliza elementos horizontalmente */
+     justify-content: center;
+     
+     /* Centraliza elementos verticalmente */
+     align-items: center;
+     
+     /* Centraliza o texto */
+     text-align: center;
+     
+     /* Define transição suave para hover */
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     
+     /* Adiciona sombra ao card */
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Efeito ao passar o mouse sobre cards de patrocinador */
+.sponsor-card:hover {
+     /* Aumenta o card levemente */
+     transform: scale(1.05);
+     
+     /* Aumenta a sombra */
+     box-shadow: 0 8px 16px rgba(255, 215, 0, 0.5);
+}
+
+/* Estilo especial para o patrocinador principal (FIA) */
+.sponsor-fia {
+     /* Define largura maior para destaque */
+     width: 250px;
+     
+     /* Define altura maior para destaque */
+     height: 180px;
+     
+     /* Define cor de fundo como amarelo para destaque */
+     background-color: #FFD700;
+     
+     /* Define borda mais espessa */
+     border: 3px solid #000000;
+}
+
+/* Efeito ao passar o mouse sobre o patrocinador principal */
+.sponsor-fia:hover {
+     /* Aumenta mais o card */
+     transform: scale(1.1);
+     
+     /* Aumenta a sombra significativamente */
+     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Estilo da imagem dentro do patrocinador principal */
+.sponsor-fia .sponsor-logo-img {
+     /* Define altura máxima maior para destaque */
+     max-height: 100px;
+     
+     /* Define largura máxima maior para destaque */
+     max-width: 180px;
+}
+
+/* Estilo da imagem do logo do patrocinador */
+.sponsor-logo-img {
+     /* Define altura máxima da imagem */
+     max-height: 80px;
+     
+     /* Define largura máxima da imagem */
+     max-width: 150px;
+     
+     /* Mantém proporção da imagem */
+     object-fit: contain;
+     
+     /* Adiciona espaçamento inferior */
+     margin-bottom: 10px;
+}
+
+/* Estilo do logo do patrocinador (mantido para compatibilidade) */
+.sponsor-logo {
+     /* Define tamanho da fonte */
+     font-size: 18px;
+     
+     /* Define peso da fonte */
+     font-weight: bold;
+     
+     /* Define cor como preto */
+     color: #000000;
+     
+     /* Adiciona espaçamento inferior */
+     margin-bottom: 10px;
+}
+
+/* Estilo do nome do patrocinador */
+.sponsor-name {
+     /* Define tamanho da fonte */
+     font-size: 12px;
+     
+     /* Define cor como amarelo */
+     color: #FFD700;
+     
+     /* Remove margens padrão */
+     margin: 0;
+}
+
+/* ========================================
+    RESPONSIVIDADE - TELAS PEQUENAS (NOVAS SEÇÕES)
+    ======================================== */
+
+/* Media query para telas menores que 768px */
+@media (max-width: 768px) {
+     /* Ajusta o grid de notícias para telas pequenas */
+     .news-grid {
+          /* Organiza cards em coluna */
+          flex-direction: column;
+          
+          /* Centraliza cards */
+          align-items: center;
+     }
+
+     /* Ajusta o card de notícia para telas pequenas */
+     .news-card {
+          /* Define largura total */
+          width: 100%;
+          
+          /* Define largura máxima */
+          max-width: 300px;
+     }
+
+     /* Ajusta o grid de patrocinadores para telas pequenas */
+     .sponsors-grid {
+          /* Organiza cards em coluna */
+          flex-direction: column;
+          
+          /* Centraliza cards */
+          align-items: center;
+     }
+
+     /* Ajusta o card de patrocinador para telas pequenas */
+     .sponsor-card {
+          /* Define largura total */
+          width: 100%;
+          
+          /* Define largura máxima */
+          max-width: 200px;
+     }
+
+     /* Ajusta o subtítulo de patrocinadores para telas pequenas */
+     .sponsors-subtitle {
+          /* Reduz o tamanho da fonte */
+          font-size: 14px;
+     }
+}
+
+
+/* ========================================
+    SEÇÃO DE TABELA DE TREINOS
+    ======================================== */
+
+/* Estilo da seção de tabela de treinos */
+.schedule-section {
+     /* Define cor de fundo como branco */
+     background-color: #FFFFFF;
+     
+     /* Adiciona espaçamento interno vertical */
+     padding: 60px 0;
+}
+
+/* Estilo do container dentro da seção de tabela */
+.schedule-section .container {
+     /* Organiza elementos em coluna */
+     flex-direction: column;
+     
+     /* Centraliza elementos */
+     align-items: center;
+     
+     /* Define espaçamento entre elementos */
+     gap: 30px;
+}
+
+/* Estilo do subtítulo da tabela */
+.schedule-subtitle {
+     /* Define tamanho da fonte */
+     font-size: 16px;
+     
+     /* Define cor como preto */
+     color: #000000;
+     
+     /* Centraliza o texto */
+     text-align: center;
+     
+     /* Remove margens padrão */
+     margin: 0;
+}
+
+/* Estilo do container da imagem da tabela */
+.schedule-container {
+     /* Exibe como flex para centralizar a imagem */
+     display: flex;
+     
+     /* Centraliza a imagem */
+     justify-content: center;
+     
+     /* Centraliza a imagem verticalmente */
+     align-items: center;
+     
+     /* Define largura total */
+     width: 100%;
+}
+
+/* Estilo da imagem da tabela de treinos */
+.schedule-img {
+     /* Define largura máxima da imagem */
+     max-width: 100%;
+     
+     /* Define altura automática */
+     height: auto;
+     
+     /* Define display como bloco */
+     display: block;
+     
+     /* Adiciona borda */
+     border: 3px solid #FFD700;
+     
+     /* Adiciona borda arredondada */
+     border-radius: 8px;
+     
+     /* Adiciona sombra */
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+     
+     /* Define transição suave */
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito ao passar o mouse sobre a imagem da tabela */
+.schedule-img:hover {
+     /* Aumenta a imagem levemente */
+     transform: scale(1.02);
+     
+     /* Aumenta a sombra */
+     box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+}
+
+/* ========================================
+    RESPONSIVIDADE - TELAS PEQUENAS (HERO E TABELA)
+    ======================================== */
+
+/* Media query para telas menores que 768px */
+@media (max-width: 768px) {
+     /* Ajusta o hero para telas pequenas */
+     .hero {
+          /* Organiza elementos em coluna */
+          flex-direction: column;
+          
+          /* Reduz a altura mínima */
+          min-height: auto;
+          
+          /* Reduz o padding */
+          padding: 40px 20px;
+          
+          /* Reduz o gap */
+          gap: 20px;
+     }
+
+     /* Ajusta a imagem do mascote para telas pequenas */
+     .mascote-img {
+          /* Reduz a largura máxima */
+          max-width: 200px;
+     }
+
+     /* Ajusta o container da tabela para telas pequenas */
+     .schedule-container {
+          /* Reduz o padding */
+          padding: 0 10px;
+     }
+
+     /* Ajusta a imagem da tabela para telas pequenas */
+     .schedule-img {
+          /* Reduz a largura máxima */
+          max-width: 100%;
+     }
+}
+
+/* ========================================
+    SEÇÃO SOBRE O PROJETO
+    Estilos para a seção "Elabora Social" no index.html
+    ======================================== */
+
+/* Container da seção sobre o projeto */
+.about-project-section {
+     padding: 80px 20px;
+     background-color: #f5f5f5;
+}
+
+.about-project-section .container {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/* Subtítulo da seção */
+.about-project-subtitle {
+     text-align: center;
+     color: #666;
+     font-size: 18px;
+    margin: 0 auto;
+    max-width: 720px;
+}
+
+/* Conteúdo principal da seção */
+.about-project-content {
+     display: grid;
+     grid-template-columns: 1.2fr 1fr;
+     gap: 40px;
+    align-items: start;
+}
+
+/* Texto da seção */
+.about-project-text {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid #FFD700;
+}
+
+/* Parágrafo do texto */
+.about-project-text p {
+     margin: 0;
+     text-align: justify;
+     line-height: 1.8;
+     color: #333;
+}
+
+.about-project-text p + p {
+    margin-top: 18px;
+}
+
+/* Highlights (números e informações) */
+.about-project-highlights {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+     gap: 18px;
+}
+
+/* Card de highlight */
+.highlight-card {
+     background-color: white;
+     padding: 26px 22px;
+     border-radius: 8px;
+     border-left: 4px solid #FFD700;
+     text-align: center;
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+     transition: transform 0.3s ease;
+     min-height: 170px;
+}
+
+/* Efeito hover no highlight card */
+.highlight-card:hover {
+     transform: translateY(-5px);
+}
+
+/* Título do highlight */
+.highlight-card h4 {
+     color: #FFD700;
+     font-size: 28px;
+     margin-bottom: 10px;
+}
+
+/* Texto do highlight */
+.highlight-card p {
+     color: #666;
+     font-size: 14px;
+     margin: 0;
+}
+
+/* Container do CTA */
+.about-project-cta {
+     text-align: center;
+     margin-bottom: 6px;
+}
+
+/* Botão da seção */
+.about-project-button {
+     display: inline-block;
+     background-color: #FFD700;
+     color: #000;
+     padding: 15px 40px;
+     border-radius: 5px;
+     text-decoration: none;
+     font-weight: bold;
+     transition: all 0.3s ease;
+     box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+}
+
+/* Efeito hover no botão */
+.about-project-button:hover {
+     background-color: #FFC700;
+     transform: translateY(-3px);
+     box-shadow: 0 6px 16px rgba(255, 215, 0, 0.4);
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+     .about-project-content {
+          grid-template-columns: 1fr;
+          gap: 30px;
+     }
+
+     .about-project-highlights {
+          grid-template-columns: 1fr;
+     }
+
+     
+    .about-project-text {
+        padding: 22px;
+    }
+}
+

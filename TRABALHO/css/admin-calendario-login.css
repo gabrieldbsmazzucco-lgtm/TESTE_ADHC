@@ -1,0 +1,45 @@
+@import url('./admin-calendario-base.css');
+
+.admin-login-form {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+  background: #fffef5;
+  border: 1px solid #f0e3a4;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.admin-login-form h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.admin-login-form label {
+  font-size: 14px;
+  font-weight: bold;
+  display: grid;
+  gap: 6px;
+}
+
+.admin-login-form input,
+.admin-login-form button {
+  font: inherit;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.admin-login-form button {
+  cursor: pointer;
+  border: none;
+  background: #ffd700;
+  font-weight: bold;
+}
+
+.admin-login-feedback {
+  margin: 10px 0 0;
+  min-height: 20px;
+  font-size: 14px;
+  color: #b71c1c;
+}

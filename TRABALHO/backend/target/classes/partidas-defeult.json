@@ -1,0 +1,53 @@
+[
+  {
+    "date": "2025-11-03",
+    "title": "ADHC vs Lages",
+    "time": "11:00",
+    "location": "SEST/SENAT Itajaí",
+    "category": "Cadete (Sub-16)",
+    "status": "Próximo jogo"
+  },
+  {
+    "date": "2025-11-04",
+    "title": "ADHC vs Lauro Muller",
+    "time": "09:30",
+    "location": "SEST/SENAT Itajaí",
+    "category": "Cadete (Sub-16)",
+    "status": "Próximo jogo"
+  },
+  {
+    "date": "2025-11-05",
+    "title": "ADHC vs Videira",
+    "time": "17:00",
+    "location": "SEST/SENAT Itajaí",
+    "category": "Cadete (Sub-16)",
+    "status": "Próximo jogo"
+  },
+  {
+    "date": "2025-09-26",
+    "title": "ADHC 30 x 27 Florianópolis",
+    "time": "—",
+    "location": "Ginásio Municipal",
+    "category": "Adulto",
+    "status": "Resultado final",
+    "description": "Jogo emocionante com vitória apertada para o ADHC."
+  },
+  {
+    "date": "2025-09-27",
+    "title": "ADHC 49 x 20 Garopaba",
+    "time": "—",
+    "location": "Ginásio Municipal",
+    "category": "Adulto",
+    "status": "Resultado final",
+    "description": "Vitória importante do ADHC em grande atuação coletiva."
+  },
+  {
+    "date": "2025-09-28",
+    "title": "ADHC 48 x 09 Tubarão",
+    "time": "—",
+    "location": "Ginásio Municipal",
+    "category": "Adulto",
+    "status": "Resultado final",
+    "description": "Excelente apresentação da equipe adulta do ADHC."
+  }
+]

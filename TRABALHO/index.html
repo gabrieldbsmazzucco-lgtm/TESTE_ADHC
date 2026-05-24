@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Gabriel De Bona Sartor Mazzucco">
+    <meta name="description" content="informações e noticias sobre o time de handebol ADHC Criciúma"> 
+    <title>ADHC - Handebol Criciúma</title>
+    <!-- Favicon: Ícone do site que aparece na aba do navegador -->
+    <link rel="icon" href="img/logo_adhc.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <!-- Cabeçalho com navegação -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">ADHC</h1>
+            <nav class="nav">
+                <button type="button" id="admin-access-trigger" class="admin-access-trigger">Acesso Admin</button>
+                 <button type="button" id="admin-logout-trigger" class="admin-access-trigger" hidden>Sair do Admin</button>
+                <a href="index.html" class="nav-link active">Início</a>
+                <a href="elenco.html" class="nav-link">Elenco</a>
+                <a href="jogos.html" class="nav-link">Jogos/Notícias</a>
+                <a href="sobre-projeto.html" class="nav-link">Sobre o Projeto</a>
+                <a href="seletiva.html" class="nav-link">Seletiva</a>
+                <a href="admin-elenco-jogadores.html" class="nav-link" data-admin-only hidden>Controle de Jogadores</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção principal com informações do time -->
+    <main class="main">
+        <!-- Seção hero com apresentação -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-logo">
+                    <img src="img/logo_adhc.jpg" alt="Logo ADHC" class="logo-img">
+                </div>
+                <h2 class="hero-title">Bem-vindo ao ADHC</h2>
+                <p class="hero-subtitle">Equipe de Handebol de Criciúma - Santa Catarina</p>
+            </div>
+            <div class="hero-mascote">
+                <img src="img/mascote_apresentacao.jpg" alt="Mascote ADHC" class="mascote-img">
+            </div>
+        </section>
+
+        <!-- Seção de informações sobre o time -->
+        <section class="info-section">
+            <div class="container">
+                <h2 class="section-title">Sobre o Time</h2>
+                <div class="info-grid">
+                    <!-- Card de informação 1 -->
+                    <div class="info-card">
+                        <h3>Localização</h3>
+                        <p>Criciúma, Santa Catarina</p>
+                    </div>
+
+                    <!-- Card de informação 2 -->
+                    <div class="info-card">
+                        <h3>Modalidade</h3>
+                        <p>Handebol</p>
+                    </div>
+
+                    <!-- Card de informação 3 -->
+                    <div class="info-card">
+                        <h3>Missão</h3>
+                        <p>Desenvolver atletas e promover o handebol na região</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de tabela de treinos -->
+        <section class="schedule-section">
+            <div class="container">
+                <h2 class="section-title">Tabela de Treinos</h2>
+                <p class="schedule-subtitle">Confira os horários e locais dos treinos do ADHC</p>
+                <div class="schedule-container">
+                    <img src="img/tabela_treinos.jpg" alt="Tabela de Treinos ADHC" class="schedule-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de notícias e destaques -->
+        <section class="news-section">
+            <div class="container">
+                <h2 class="section-title">Notícias e Destaques</h2>
+                <div class="news-grid">
+                    <!-- Card de notícia 1 -->
+                    <article class="news-card">
+                        <div class="news-date">15 Nov</div>
+                        <h3 class="news-title">Seletiva 2025 Aberta</h3>
+                        <p class="news-description">Estamos recebendo inscrições para nossa seletiva de 2025. Venha fazer parte do nosso time e mostrar seu talento no handebol!</p>
+                        <a href="seletiva.html" class="news-link">Saiba mais →</a>
+                    </article>
+
+                    <!-- Card de notícia 2 -->
+                    <article class="news-card">
+                        <div class="news-date">10 Nov</div>
+                        <h3 class="news-title">Treinos Intensivos</h3>
+                        <p class="news-description">Os treinos do ADHC estão em alta intensidade. Nossos atletas se preparando para os próximos campeonatos regionais com dedicação total.</p>
+                        <a href="#" class="news-link">Saiba mais →</a>
+                    </article>
+
+                    <!-- Card de notícia 3 -->
+                    <article class="news-card">
+                        <div class="news-date">05 Nov</div>
+                        <h3 class="news-title">Vitória Importante</h3>
+                        <p class="news-description">ADHC conquista vitória importante em jogo amistoso contra equipe visitante. Desempenho excelente de todos os atletas em quadra.</p>
+                        <a href="#" class="news-link">Saiba mais →</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de patrocinadores -->
+        <section class="sponsors-section">
+            <div class="container">
+                <h2 class="section-title">Patrocinadores e Parceiros</h2>
+                <p class="sponsors-subtitle">Agradecemos o apoio de nossos parceiros que tornam possível o desenvolvimento do handebol em Criciúma</p>
+                <div class="sponsors-grid">
+                    <!-- Patrocinador Principal: FIA -->
+                    <div class="sponsor-card sponsor-fia">
+                        <img src="img/logo-fia.jpg" alt="FIA - Fundo da Infância e Adolescência de Criciúma" class="sponsor-logo-img">
+                        <p class="sponsor-name"></p>
+                    </div>
+
+                    <!-- Patrocinador Ouro: Driblle -->
+                    <div class="sponsor-card">
+                        <img src="img/logo-driblle.jpg" alt="Driblle - Uniformes Esportivos" class="sponsor-logo-img">
+                        <p class="sponsor-name"></p>
+                    </div>
+
+                    <!-- Patrocinador Prata: Leve Ortopedia -->
+                    <div class="sponsor-card">
+                        <img src="img/logo-leve.jpg" alt="Leve Ortopedia" class="sponsor-logo-img">
+                        <p class="sponsor-name"></p>
+                    </div>
+
+                    <!-- Parceiro Oficial: Fisiomed -->
+                    <div class="sponsor-card">
+                        <img src="img/logo-fisiomed.jpg" alt="Fisiomed" class="sponsor-logo-img">
+                        <p class="sponsor-name"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Seção sobre o projeto -->
+        <section class="about-project-section">
+            <div class="container">
+                <h2 class="section-title">Elabora Social: 3 Passos para o Futuro</h2>
+                <p class="about-project-subtitle">Conheça nosso projeto de transformação social</p>
+                <div class="about-project-content">
+                    <div class="about-project-text">
+                        <p>
+                            O <strong>ADHC</strong> é muito mais que uma equipe de handebol. Desde <strong>2019</strong>, desenvolvemos o projeto <strong>"Elabora Social: 3 Passos para o Futuro"</strong>, que transforma a vida de <strong>120 crianças e adolescentes</strong> de comunidades vulneráveis de Criciúma.
+                        </p>
+                        <p>
+                            Nosso objetivo é promover <strong>inclusão, disciplina e desenvolvimento humano</strong>, oferecendo treinos gratuitos de handebol com profissionais especializados, abrindo caminhos para o desenvolvimento pessoal, esportivo e acadêmico.
+                        </p>
+                        <p>
+                            Mais do que formar atletas, formamos <strong>cidadãos resilientes, disciplinados e socialmente engajados</strong>, ampliando oportunidades de vida e fortalecendo o ecossistema esportivo de Criciúma.
+                        </p>
+                    </div>
+                    <div class="about-project-highlights">
+                        <div class="highlight-card">
+                            <h4>120</h4>
+                            <p>Crianças e adolescentes beneficiadas</p>
+                        </div>
+                        <div class="highlight-card">
+                            <h4>Desde 2019</h4>
+                            <p>Transformando vidas</p>
+                        </div>
+                        <div class="highlight-card">
+                            <h4>4 ODS</h4>
+                            <p>Objetivos de Desenvolvimento Sustentável</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-project-cta">
+                    <a href="sobre-projeto.html" class="about-project-button">Saiba Mais sobre o Projeto</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Seção de chamada para ação -->
+        <section class="cta-section">
+            <div class="container">
+                <h2 class="cta-title">Quer fazer parte do ADHC?</h2>
+                <p class="cta-text">Participe de nossa seletiva e mostre seu talento!</p>
+                <a href="seletiva.html" class="cta-button">Inscrever-se na Seletiva</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ADHC - Handebol Criciúma. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    
+    <script src="js/javascript.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADHC - Admin Calendário</title>
+      <link rel="icon" href="img/logo_adhc.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="css/admin-calendario-login.css">
+</head>
+<body>
+  <main class="admin-main">
+    <section class="admin-card">
+      <h1>Painel do Calendário</h1>
+      <p>Faça login para acessar a área de edição de jogos.</p>
+
+        <form id="admin-login-form" class="admin-login-form" onsubmit="return false;">
+        <h2>Login do administrador</h2>
+        <label>Usuário <input type="text" name="username" required autocomplete="username"></label>
+        <label>Senha <input type="password" name="password" required autocomplete="current-password"></label>
+        <button type="submit">Entrar</button>
+      </form>
+
+<p id="admin-login-feedback" class="admin-login-feedback" aria-live="polite"></p>
+      <p class="admin-note">Após login, você será redirecionado para a página de edição.</p>
+      <div class="admin-toolbar">
+        <a href="jogos.html">← Voltar para Jogos</a>
+      </div>
+    </section>
+  </main>
+  <script src="js/javascript.js"></script>
+</body>
+</html>

@@ -1,0 +1,555 @@
+
+/* ========================================
+    ESTILOS DA PÁGINA ELENCO.HTML
+    Base compartilhada importada de estilo.css
+    ======================================== */
+@import url('./estilo.css');
+
+/* ========================================
+    ESTILOS DA PÁGINA DE ELENCO
+    Cores principais: Amarelo (#FFD700), Preto (#000000), Branco (#FFFFFF)
+    ======================================== */
+
+/* ========================================
+    RESET E CONFIGURAÇÕES GLOBAIS
+    ======================================== */
+/* Remove margens e padding padrão de todos os elementos */
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+/* Define estilos globais para o corpo da página */
+/* Define a fonte padrão para toda a página */
+body {
+     font-family: 'Arial', sans-serif;
+     
+     /* Define a cor de fundo como branco */
+     background-color: #FFFFFF;
+     
+     /* Define a cor do texto como preto */
+     color: #000000;
+     
+     /* Define a altura mínima para ocupar toda a viewport */
+     min-height: 100vh;
+     
+     /* Exibe o corpo como flex para organizar elementos filhos */
+     display: flex;
+     
+     /* Organiza os elementos em coluna vertical */
+     flex-direction: column;
+}
+
+/* ========================================
+    CONTAINER - CLASSE REUTILIZÁVEL
+    ======================================== */
+
+/* Container centraliza o conteúdo e define largura máxima */
+.container {
+     /* Define largura máxima do container */
+     max-width: 1200px;
+     
+     /* Centraliza o container horizontalmente */
+     margin: 0 auto;
+     
+     /* Adiciona espaçamento interno horizontal */
+     padding: 0 20px;
+     
+     /* Exibe como flex para organizar elementos filhos */
+     display: flex;
+     
+     /* Organiza elementos em coluna */
+     flex-direction: column;
+     
+     /* Alinha elementos verticalmente ao centro */
+     align-items: center;
+     
+     /* Define largura total */
+     width: 100%;
+}
+
+/* ========================================
+    CABEÇALHO (HEADER)
+    ======================================== */
+
+/* Estilo do cabeçalho da página */
+.header {
+     /* Define cor de fundo como preto */
+     background-color: #000000;
+     
+     /* Define cor do texto como branco */
+     color: #FFFFFF;
+     
+     /* Adiciona espaçamento interno vertical */
+     padding: 20px 0;
+     
+     /* Adiciona sombra ao cabeçalho */
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo do header container para manter navegação ao lado do logo */
+.header .container {
+     /* Exibe como flex */
+     display: flex;
+     
+     /* Organiza em linha horizontal */
+     flex-direction: row;
+     
+     /* Distribui espaço entre elementos */
+     justify-content: space-between;
+     
+     /* Alinha itens verticalmente */
+     align-items: center;
+}
+
+/* Estilo do logo (ADHC) no cabeçalho */
+.logo {
+     /* Define tamanho da fonte */
+     font-size: 28px;
+     
+     /* Define peso da fonte como bold */
+     font-weight: bold;
+     
+     /* Define cor como amarelo */
+     color: #FFD700;
+     
+     /* Remove margens padrão */
+     margin: 0;
+}
+
+/* ========================================
+    NAVEGAÇÃO (NAV)
+    ======================================== */
+
+/* Estilo da barra de navegação */
+.nav {
+     /* Exibe como flex para organizar links horizontalmente */
+     display: flex;
+     
+     /* Define espaçamento entre links */
+     gap: 30px;
+}
+
+/* Estilo dos links de navegação */
+.nav-link {
+     /* Define cor do texto como branco */
+     color: #FFFFFF;
+     
+     /* Remove a decoração padrão de links */
+     text-decoration: none;
+     
+     /* Define tamanho da fonte */
+     font-size: 16px;
+     
+     /* Define transição suave para hover */
+     transition: color 0.3s ease;
+}
+
+/* Efeito ao passar o mouse sobre links de navegação */
+.nav-link:hover {
+     /* Muda a cor para amarelo ao passar o mouse */
+     color: #FFD700;
+}
+
+/* Estilo do link ativo (página atual) */
+.nav-link.active {
+     /* Define cor como amarelo para indicar página ativa */
+     color: #FFD700;
+     
+     /* Adiciona borda inferior para destacar */
+     border-bottom: 2px solid #FFD700;
+     
+     /* Adiciona padding para espaçar a borda */
+     padding-bottom: 5px;
+}
+
+/* ========================================
+    SEÇÃO PRINCIPAL (MAIN)
+    ======================================== */
+
+/* Estilo da seção principal */
+.main {
+     /* Faz a seção crescer para ocupar espaço disponível */
+     flex: 1;
+     
+     /* Define largura total */
+     width: 100%;
+}
+
+/* ========================================
+    SEÇÃO HERO (APRESENTAÇÃO)
+    ======================================== */
+
+/* Estilo da seção hero (banner principal) */
+.hero {
+     /* Define cor de fundo como preto */
+     background-color: #000000;
+     
+     /* Define cor do texto como branco */
+     color: #FFFFFF;
+     
+     /* Define altura mínima */
+     min-height: 300px;
+     
+     /* Exibe como flex para centralizar conteúdo */
+     display: flex;
+     
+     /* Centraliza conteúdo horizontalmente */
+     justify-content: center;
+     
+     /* Centraliza conteúdo verticalmente */
+     align-items: center;
+     
+     /* Adiciona espaçamento interno */
+     padding: 60px 20px;
+}
+
+/* Estilo do conteúdo dentro da seção hero */
+.hero-content {
+     /* Exibe como flex para organizar elementos em coluna */
+     display: flex;
+     
+     /* Organiza elementos em coluna vertical */
+     flex-direction: column;
+     
+     /* Centraliza elementos horizontalmente */
+     align-items: center;
+     
+     /* Define espaçamento entre elementos */
+     gap: 20px;
+}
+
+/* Estilo do título da seção hero */
+.hero-title {
+     /* Define tamanho da fonte */
+     font-size: 48px;
+     
+     /* Define peso da fonte */
+     font-weight: bold;
+     
+     /* Define cor como amarelo */
+     color: #FFD700;
+}
+
+/* Estilo do subtítulo da seção hero */
+.hero-subtitle {
+     /* Define tamanho da fonte */
+     font-size: 24px;
+     
+     /* Define cor como branco */
+     color: #FFFFFF;
+}
+
+/* ========================================
+    SEÇÃO DE ELENCO
+    ======================================== */
+
+/* Estilo da seção de elenco */
+.roster-section {
+     /* Define cor de fundo como branco */
+     background-color: #FFFFFF;
+     
+     /* Adiciona espaçamento interno vertical */
+     padding: 60px 0;
+}
+
+/* Estilo do título da seção */
+.section-title {
+     /* Define tamanho da fonte */
+     font-size: 36px;
+     
+     /* Define peso da fonte */
+     font-weight: bold;
+     
+     /* Define cor como preto */
+     color: #000000;
+     
+     /* Centraliza o texto */
+     text-align: center;
+     
+     /* Remove margens padrão */
+     margin: 0 0 50px 0;
+}
+
+.roster-admin-link-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -6px;
+    margin-bottom: 22px;
+}
+
+.roster-admin-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: 2px solid #8134af;
+    background: #ffffff;
+    color: #8134af;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.roster-admin-link:hover {
+    background: #8134af;
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(129, 52, 175, 0.22);
+}
+
+/* ========================================
+    CONTAINER DE CATEGORIA
+    ======================================== */
+
+/* Estilo do container de categoria */
+.category-container {
+     /* Define largura total */
+     width: 100%;
+     
+     /* Define largura máxima */
+     max-width: 900px;
+     
+     /* Adiciona espaçamento inferior */
+     margin-bottom: 50px;
+     
+     /* Exibe como flex para organizar elementos em coluna */
+     display: flex;
+     
+     /* Organiza elementos em coluna */
+     flex-direction: column;
+     
+     /* Alinha elementos ao centro */
+     align-items: center;
+     
+     /* Define espaçamento entre elementos */
+     gap: 15px;
+}
+
+/* Estilo do título da categoria */
+.category-title {
+     /* Define tamanho da fonte */
+     font-size: 28px;
+     
+     /* Define peso da fonte */
+     font-weight: bold;
+     
+     /* Define cor como amarelo */
+     color: #FFD700;
+     
+     /* Remove margens padrão */
+     margin: 0;
+}
+
+/* Estilo da descrição da categoria */
+.category-description {
+     /* Define tamanho da fonte */
+     font-size: 16px;
+     
+     /* Define cor como preto */
+     color: #000000;
+     
+     /* Centraliza o texto */
+     text-align: center;
+     
+     /* Remove margens padrão */
+     margin: 0;
+}
+
+/* ========================================
+    FOTO DA CATEGORIA
+    ======================================== */
+
+/* Estilo do container da foto */
+.category-photo {
+     /* Exibe como flex para centralizar a imagem */
+     display: flex;
+     
+     /* Centraliza a imagem horizontalmente */
+     justify-content: center;
+     
+     /* Centraliza a imagem verticalmente */
+     align-items: center;
+     
+     /* Define largura total */
+     width: 100%;
+     
+     /* Define largura máxima */
+     max-width: 800px;
+}
+
+/* Estilo da imagem do elenco */
+.roster-image {
+     /* Define largura total */
+     width: 100%;
+     
+     /* Define altura automática */
+     height: auto;
+     
+     /* Define display como bloco */
+     display: block;
+     
+     /* Adiciona borda */
+     border: 3px solid #FFD700;
+     
+     /* Adiciona borda arredondada */
+     border-radius: 8px;
+     
+     /* Adiciona sombra */
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+     
+     /* Define transição suave */
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito ao passar o mouse sobre a imagem */
+.roster-image:hover {
+     /* Aumenta a imagem levemente */
+     transform: scale(1.02);
+     
+     /* Aumenta a sombra */
+     box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+}
+
+/* ========================================
+    RODAPÉ (FOOTER)
+    ======================================== */
+
+/* Estilo do rodapé */
+.footer {
+     /* Define cor de fundo como preto */
+     background-color: #000000;
+     
+     /* Define cor do texto como branco */
+     color: #FFFFFF;
+     
+     /* Adiciona espaçamento interno vertical */
+     padding: 20px 0;
+     
+     /* Centraliza o texto */
+     text-align: center;
+     
+     /* Adiciona borda superior */
+     border-top: 2px solid #FFD700;
+}
+
+/* Estilo do parágrafo dentro do rodapé */
+.footer p {
+     /* Define tamanho da fonte */
+     font-size: 14px;
+     
+     /* Remove margens padrão */
+     margin: 0;
+}
+
+/* ========================================
+    RESPONSIVIDADE - TELAS PEQUENAS
+    ======================================== */
+
+/* Media query para telas menores que 768px */
+@media (max-width: 768px) {
+     /* Ajusta o header para telas pequenas */
+     .header .container {
+          /* Organiza elementos em coluna */
+          flex-direction: column;
+          
+          /* Define espaçamento entre elementos */
+          gap: 15px;
+     }
+
+     /* Ajusta a navegação para telas pequenas */
+     .nav {
+          /* Reduz o espaçamento entre links */
+          gap: 15px;
+          
+          /* Faz os links quebrarem em múltiplas linhas */
+          flex-wrap: wrap;
+          
+          /* Centraliza os links */
+          justify-content: center;
+     }
+
+     /* Ajusta o hero para telas pequenas */
+     .hero {
+          /* Reduz a altura mínima */
+          min-height: 200px;
+          
+          /* Reduz o padding */
+          padding: 40px 20px;
+     }
+
+     /* Ajusta o título do hero para telas pequenas */
+     .hero-title {
+          /* Reduz o tamanho da fonte */
+          font-size: 32px;
+     }
+
+     /* Ajusta o subtítulo do hero para telas pequenas */
+     .hero-subtitle {
+          /* Reduz o tamanho da fonte */
+          font-size: 18px;
+     }
+
+     /* Ajusta o título da seção para telas pequenas */
+     .section-title {
+          /* Reduz o tamanho da fonte */
+          font-size: 24px;
+     }
+
+     /* Ajusta o container de categoria para telas pequenas */
+     .category-container {
+          /* Reduz o espaçamento inferior */
+          margin-bottom: 30px;
+     }
+
+     /* Ajusta o título da categoria para telas pequenas */
+     .category-title {
+          /* Reduz o tamanho da fonte */
+          font-size: 22px;
+     }
+
+     /* Ajusta a descrição da categoria para telas pequenas */
+     .category-description {
+          /* Reduz o tamanho da fonte */
+          font-size: 14px;
+     }
+
+     /* Ajusta a foto da categoria para telas pequenas */
+     .category-photo {
+          /* Reduz o padding */
+          padding: 0 10px;
+     }
+
+     /* Ajusta a imagem do elenco para telas pequenas */
+     .roster-image {
+          /* Reduz a largura máxima */
+          max-width: 100%;
+     }
+     @media (max-width: 480px) {
+    .nav-link {
+        font-size: 14px;
+        padding: 6px 8px;
+    }
+
+    .hero-title {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .hero-subtitle {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .category-title {
+        font-size: 20px;
+    }
+
+    .category-description {
+        font-size: 13px;
+    }
+}
+}

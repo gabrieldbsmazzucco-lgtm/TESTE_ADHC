@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADHC - Edição de Fotos do Elenco</title>
+      <link rel="icon" href="img/logo_adhc.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="css/admin-elenco-edicao.css">
+</head>
+<body>
+  <main class="admin-main">
+    <section class="admin-card">
+      <h1>Edição de Fotos do Elenco</h1>
+      <p>Adicione, edite ou exclua categorias/fotos exibidas.</p>
+
+      <section class="admin-roster-preview-wrap">
+        <h2 class="admin-subtitle">Prévia das categorias já lançadas</h2>
+        <p class="admin-preview-note">Use os botões de cada card para editar ou excluir rapidamente.</p>
+        <section id="admin-roster-list" class="admin-list"></section>
+      </section>
+
+      <form id="admin-roster-form" class="admin-form">
+        <label>Título da categoria <input type="text" name="title" required placeholder="(INFANTIL) Sub-14"></label>
+        <label>Descrição <textarea name="description" rows="3" required placeholder="Descrição da categoria"></textarea></label>
+        <label>Imagem (arquivo)
+          <input type="file" name="image" accept="image/*">
+          <small class="form-help">Envie uma imagem. Ao editar, você pode manter a foto atual sem enviar outra.</small>
+        </label>
+        <div class="image-preview-box">
+          <p class="image-preview-title">Pré-visualização da imagem</p>
+          <img id="admin-roster-image-preview" class="admin-image-preview-form" src="" alt="Prévia da imagem selecionada" hidden>
+          <p id="admin-roster-image-empty" class="image-preview-empty">Nenhuma imagem selecionada.</p>
+          <div class="image-preview-actions">
+            <button id="admin-roster-image-remove" type="button">Excluir imagem</button>
+          </div>
+        </div>
+        <label>Texto alternativo (alt) <input type="text" name="alt" required placeholder="Elenco Sub-14"></label>
+        <button type="submit">Salvar categoria</button>
+      </form>
+
+      <div class="admin-toolbar">
+        <button id="admin-roster-reset" type="button">Restaurar categorias padrão</button>
+        <button id="admin-roster-logout" type="button" class="admin-logout" onclick="sessionStorage.removeItem('adhc_admin_session'); window.location.href='admin-calendario.html'">Sair</button>
+        <a href="elenco.html">← Voltar para Elenco</a>
+      </div>
+      <p class="admin-note">As alterações ficam salvas neste navegador e já aparecem em elenco.html.</p>
+    </section>
+  </main>
+
+  <script src="js/javascript.js"></script>
+</body>
+</html>

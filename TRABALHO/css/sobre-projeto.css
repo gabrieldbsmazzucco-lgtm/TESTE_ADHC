@@ -1,0 +1,752 @@
+/* ========================================
+    ESTILOS DA PÁGINA SOBRE-PROJETO.HTML
+    Base compartilhada importada de estilo.css
+    ======================================== */
+@import url('./estilo.css');
+
+/* ========================================
+    ESTILOS - PÁGINA SOBRE O PROJETO
+    Estilos completos para a página sobre-projeto.html
+    ======================================== */
+
+/* ========================================
+    VARIÁVEIS DE COR
+    Define as cores principais do site
+    ======================================== */
+:root {
+     /* Cores principais (amarelo, preto, branco) */
+     --cor-primaria: #FFD700;      /* Amarelo */
+     --cor-secundaria: #000000;    /* Preto */
+     --cor-terciaria: #FFFFFF;     /* Branco */
+     --cor-fundo: #f5f5f5;         /* Cinza claro para fundo */
+     --cor-texto: #333333;         /* Cinza escuro para texto */
+     --cor-borda: #ddd;            /* Cinza para bordas */
+     --cor-hover: #FFC700;         /* Amarelo mais escuro para hover */
+}
+
+/* ========================================
+    ESTILOS GLOBAIS
+    Estilos aplicados a todo o documento
+    ======================================== */
+
+/* Reseta estilos padrão do navegador */
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+/* Estilo do corpo da página */
+body {
+     font-family: 'Arial', sans-serif;
+     line-height: 1.6;
+     color: var(--cor-texto);
+     background-color: var(--cor-fundo);
+}
+
+/* Container para centralizar conteúdo */
+.container {
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 0 20px;
+}
+
+/* ========================================
+    CABEÇALHO E NAVEGAÇÃO
+    Estilos do header com logo e menu
+    ======================================== */
+
+/* Estilo do cabeçalho */
+.header {
+     background-color: var(--cor-secundaria);
+     padding: 20px 0;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+     position: sticky;
+     top: 0;
+     z-index: 100;
+}
+
+/* Container do header com flexbox */
+.header .container {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+
+/* Logo do header */
+.logo {
+     color: var(--cor-primaria);
+     font-size: 28px;
+     font-weight: bold;
+     text-decoration: none;
+}
+
+/* Navegação com flexbox */
+.nav {
+     display: flex;
+     gap: 30px;
+     flex-wrap: wrap;
+}
+
+/* Links de navegação */
+.nav-link {
+     color: var(--cor-terciaria);
+     text-decoration: none;
+     font-weight: 500;
+     transition: color 0.3s ease;
+     padding: 8px 12px;
+     border-radius: 4px;
+}
+
+/* Efeito hover nos links de navegação */
+.nav-link:hover {
+     color: var(--cor-primaria);
+     background-color: rgba(255, 215, 0, 0.1);
+}
+
+/* Link ativo da navegação */
+.nav-link.active {
+     color: var(--cor-primaria);
+     border-bottom: 2px solid var(--cor-primaria);
+}
+
+/* ========================================
+    SEÇÃO HERO
+    Estilo da seção de boas-vindas
+    ======================================== */
+
+/* Seção hero com fundo gradiente */
+.hero {
+     background: linear-gradient(135deg, var(--cor-secundaria) 0%, #1a1a1a 100%);
+     color: var(--cor-terciaria);
+     padding: 80px 20px;
+     text-align: center;
+}
+
+/* Conteúdo do hero */
+.hero-content {
+     max-width: 800px;
+     margin: 0 auto;
+     animation: fadeInDown 0.8s ease;
+}
+
+/* Título do hero */
+.hero-title {
+     font-size: 48px;
+     margin-bottom: 20px;
+     color: var(--cor-primaria);
+}
+
+/* Subtítulo do hero */
+.hero-subtitle {
+     font-size: 20px;
+     color: var(--cor-terciaria);
+}
+
+/* ========================================
+    SEÇÕES PRINCIPAIS
+    Estilos das seções de conteúdo
+    ======================================== */
+
+/* Seção genérica */
+.project-section,
+.audience-section,
+.objective-section,
+.justification-section,
+.investment-section,
+.benefits-section,
+.ods-section,
+.contact-section {
+     padding: 60px 20px;
+     background-color: var(--cor-terciaria);
+}
+
+/* Alternância de cores de fundo */
+.audience-section,
+.objective-section,
+.investment-section,
+.ods-section {
+     background-color: var(--cor-fundo);
+}
+
+/* Título das seções */
+.section-title {
+     font-size: 36px;
+     color: var(--cor-secundaria);
+     margin-bottom: 40px;
+     text-align: center;
+     border-bottom: 3px solid var(--cor-primaria);
+     padding-bottom: 15px;
+}
+
+/* ========================================
+    SEÇÃO DE APRESENTAÇÃO
+    Estilos para o conteúdo de apresentação
+    ======================================== */
+
+/* Conteúdo do projeto */
+.project-content {
+     max-width: 800px;
+     margin: 0 auto;
+}
+
+/* Texto do projeto */
+.project-text {
+     font-size: 18px;
+     line-height: 1.8;
+     color: var(--cor-texto);
+     text-align: justify;
+}
+
+/* ========================================
+    SEÇÃO DE PÚBLICO ATENDIDO
+    Grid de cards com informações
+    ======================================== */
+
+/* Grid de público atendido */
+.audience-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 30px;
+     margin-bottom: 30px;
+}
+
+/* Card de público atendido */
+.audience-card {
+     background-color: var(--cor-terciaria);
+     padding: 30px;
+     border-radius: 8px;
+     border-left: 4px solid var(--cor-primaria);
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito hover no card */
+.audience-card:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Título do card */
+.audience-title {
+     color: var(--cor-primaria);
+     font-size: 20px;
+     margin-bottom: 15px;
+}
+
+/* Texto do card */
+.audience-text {
+     color: var(--cor-texto);
+     font-size: 16px;
+     line-height: 1.6;
+}
+
+/* ========================================
+    SEÇÃO DE OBJETIVO
+    Estilo para objetivo do projeto
+    ======================================== */
+
+/* Conteúdo do objetivo */
+.objective-content {
+     max-width: 900px;
+     margin: 0 auto;
+     background-color: var(--cor-terciaria);
+     padding: 40px;
+     border-radius: 8px;
+     border-left: 5px solid var(--cor-primaria);
+}
+
+/* Texto do objetivo */
+.objective-text {
+     font-size: 18px;
+     line-height: 1.8;
+     color: var(--cor-texto);
+     text-align: justify;
+}
+
+/* ========================================
+    SEÇÃO DE JUSTIFICATIVA
+    Estilo para justificativa do projeto
+    ======================================== */
+
+/* Conteúdo da justificativa */
+.justification-content {
+     max-width: 900px;
+     margin: 0 auto;
+}
+
+/* Texto da justificativa */
+.justification-text {
+     font-size: 16px;
+     line-height: 1.8;
+     color: var(--cor-texto);
+     text-align: justify;
+     margin-bottom: 20px;
+     padding: 15px;
+     border-left: 3px solid var(--cor-primaria);
+     background-color: rgba(255, 215, 0, 0.05);
+}
+
+/* ========================================
+    SEÇÃO DE INVESTIMENTO
+    Grid com informações de investimento
+    ======================================== */
+
+/* Grid de investimento */
+.investment-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 30px;
+     margin-bottom: 40px;
+}
+
+/* Card de investimento */
+.investment-card {
+     background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-hover) 100%);
+     padding: 40px;
+     border-radius: 8px;
+     text-align: center;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+     transition: transform 0.3s ease;
+}
+
+/* Efeito hover no card de investimento */
+.investment-card:hover {
+     transform: scale(1.05);
+}
+
+/* Título do card de investimento */
+.investment-title {
+     color: var(--cor-secundaria);
+     font-size: 16px;
+     margin-bottom: 15px;
+     font-weight: bold;
+}
+
+/* Valor do investimento */
+.investment-value {
+     color: var(--cor-secundaria);
+     font-size: 28px;
+     font-weight: bold;
+}
+
+/* Descrição do investimento */
+.investment-description {
+     max-width: 900px;
+     margin: 0 auto;
+     font-size: 16px;
+     line-height: 1.8;
+     color: var(--cor-texto);
+     text-align: justify;
+}
+
+/* ========================================
+    SEÇÃO DE BENEFÍCIOS
+    Estilo para ganhos de investidores
+    ======================================== */
+
+/* Conteúdo de benefícios */
+.benefits-content {
+     max-width: 900px;
+     margin: 0 auto;
+}
+
+/* Texto de benefícios */
+.benefits-text {
+     font-size: 18px;
+     line-height: 1.8;
+     color: var(--cor-texto);
+     margin-bottom: 30px;
+     text-align: justify;
+}
+
+/* Lista de benefícios */
+.benefits-list {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 25px;
+}
+
+/* Item de benefício */
+.benefit-item {
+     background-color: var(--cor-fundo);
+     padding: 25px;
+     border-radius: 8px;
+     border-top: 4px solid var(--cor-primaria);
+     transition: transform 0.3s ease;
+}
+
+/* Efeito hover no item de benefício */
+.benefit-item:hover {
+     transform: translateY(-5px);
+}
+
+/* Título do benefício */
+.benefit-title {
+     color: var(--cor-primaria);
+     font-size: 18px;
+     margin-bottom: 10px;
+}
+
+/* Descrição do benefício */
+.benefit-description {
+     color: var(--cor-texto);
+     font-size: 14px;
+     line-height: 1.6;
+}
+
+/* ========================================
+    SEÇÃO DE ODS
+    Grid com Objetivos de Desenvolvimento Sustentável
+    ======================================== */
+
+/* Grid de ODS */
+.ods-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 30px;
+}
+
+/* Card de ODS */
+.ods-card {
+     background-color: var(--cor-terciaria);
+     padding: 30px;
+     border-radius: 8px;
+     text-align: center;
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+     border-top: 5px solid var(--cor-primaria);
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito hover no card de ODS */
+.ods-card:hover {
+     transform: translateY(-8px);
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Número do ODS */
+.ods-number {
+     color: var(--cor-primaria);
+     font-size: 36px;
+     font-weight: bold;
+     margin-bottom: 10px;
+}
+
+/* Título do ODS */
+.ods-title {
+     color: var(--cor-secundaria);
+     font-size: 18px;
+     font-weight: bold;
+     margin-bottom: 10px;
+}
+
+/* Descrição do ODS */
+.ods-description {
+     color: var(--cor-texto);
+     font-size: 14px;
+     line-height: 1.6;
+}
+
+/* ========================================
+    SEÇÃO DE CONTATOS
+    Grid com informações de contato
+    ======================================== */
+
+/* Grid de contatos */
+.contact-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+     gap: 30px;
+}
+
+/* Card de contato */
+.contact-card {
+     background-color: var(--cor-fundo);
+     padding: 30px;
+     border-radius: 8px;
+     border-left: 4px solid var(--cor-primaria);
+     text-align: center;
+     transition: transform 0.3s ease;
+}
+
+/* Efeito hover no card de contato */
+.contact-card:hover {
+     transform: translateY(-5px);
+}
+
+/* Título do contato */
+.contact-title {
+     color: var(--cor-primaria);
+     font-size: 18px;
+     margin-bottom: 15px;
+}
+
+/* Informação de contato */
+.contact-info {
+     color: var(--cor-texto);
+     font-size: 14px;
+     line-height: 1.8;
+}
+
+/* ========================================
+    SEÇÃO DE CTA (Call To Action)
+    Estilo para chamada de ação
+    ======================================== */
+
+/* Seção CTA */
+.cta-section {
+     background: linear-gradient(135deg, var(--cor-secundaria) 0%, #1a1a1a 100%);
+     color: var(--cor-terciaria);
+     padding: 60px 20px;
+     text-align: center;
+}
+
+/* Título do CTA */
+.cta-title {
+     font-size: 36px;
+     margin-bottom: 15px;
+     color: var(--cor-primaria);
+}
+
+/* Subtítulo do CTA */
+.cta-subtitle {
+     font-size: 18px;
+     margin-bottom: 30px;
+     color: var(--cor-terciaria);
+}
+
+/* Botão CTA */
+.cta-button {
+     display: inline-block;
+     background-color: var(--cor-primaria);
+     color: var(--cor-secundaria);
+     padding: 15px 40px;
+     border-radius: 5px;
+     text-decoration: none;
+     font-weight: bold;
+     font-size: 16px;
+     transition: all 0.3s ease;
+     box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+}
+
+/* Efeito hover no botão CTA */
+.cta-button:hover {
+     background-color: var(--cor-hover);
+     transform: translateY(-3px);
+     box-shadow: 0 6px 16px rgba(255, 215, 0, 0.4);
+}
+
+/* ========================================
+    RODAPÉ
+    Estilo do footer
+    ======================================== */
+
+/* Estilo do rodapé */
+.footer {
+     background-color: var(--cor-secundaria);
+     color: var(--cor-terciaria);
+     text-align: center;
+     padding: 30px 20px;
+     margin-top: 60px;
+}
+
+/* ========================================
+    ANIMAÇÕES
+    Definição de animações CSS
+    ======================================== */
+
+/* Animação fade-in down */
+@keyframes fadeInDown {
+     from {
+          opacity: 0;
+          transform: translateY(-30px);
+     }
+     to {
+          opacity: 1;
+          transform: translateY(0);
+     }
+}
+
+/* Animação fade-in */
+@keyframes fadeIn {
+     from {
+          opacity: 0;
+     }
+     to {
+          opacity: 1;
+     }
+}
+
+/* ========================================
+    RESPONSIVIDADE
+    Media queries para diferentes tamanhos de tela
+    ======================================== */
+
+/* Tablets (até 768px) */
+@media (max-width: 768px) {
+     /* Navegação em coluna em telas pequenas */
+     .nav {
+          flex-direction: column;
+          gap: 10px;
+     }
+
+     /* Título do hero menor */
+     .hero-title {
+          font-size: 32px;
+     }
+
+     /* Seção title menor */
+     .section-title {
+          font-size: 28px;
+     }
+
+     /* Grid com menos colunas */
+     .audience-grid,
+     .benefits-list,
+     .ods-grid,
+     .contact-grid,
+     .investment-grid {
+          grid-template-columns: 1fr;
+     }
+}
+
+/* Mobile (até 480px) */
+@media (max-width: 480px) {
+     /* Header em coluna */
+     .header .container {
+          flex-direction: column;
+          gap: 15px;
+     }
+
+     .nav-link {
+        font-size: 14px;
+        padding: 6px 8px;
+    }
+
+     /* Título do hero muito menor */
+     .hero-title {
+          font-size: 24px;
+     }
+
+     /* Seção title muito menor */
+     .section-title {
+          font-size: 22px;
+     }
+
+     /* Padding reduzido */
+     .project-section,
+     .audience-section,
+     .objective-section,
+     .justification-section,
+     .investment-section,
+     .benefits-section,
+     .ods-section,
+     .contact-section {
+          padding: 40px 15px;
+     }
+
+     /* Botão CTA em largura total */
+     .cta-button {
+          display: block;
+          width: 100%;
+     }
+}
+
+/* ========================================
+    SEÇÃO DE INSTAGRAM
+    ======================================== */
+.instagram-section .section-title {
+     /* Define cor do texto como branco */
+     color: #FFFFFF;
+}
+
+/* Estilo da seção de Instagram */
+.instagram-section {
+     /* Define cor de fundo como preto */
+     background-color: #000000;
+     
+     /* Define cor do texto como branco */
+     color: #FFFFFF;
+     
+     /* Adiciona espaçamento interno vertical */
+     padding: 60px 20px;
+}
+
+/* Estilo do container dentro da seção de Instagram */
+.instagram-section .container {
+     /* Organiza elementos em coluna */
+     flex-direction: column;
+     
+     /* Centraliza elementos */
+     align-items: center;
+     
+     /* Define espaçamento entre elementos */
+     gap: 20px;
+}
+
+/* Estilo do subtítulo da seção de Instagram */
+.instagram-subtitle {
+     /* Define tamanho da fonte */
+     font-size: 18px;
+     
+     /* Define cor como branco */
+     color: #FFFFFF;
+     
+     /* Centraliza o texto */
+     text-align: center;
+     
+     /* Define largura máxima */
+     max-width: 600px;
+}
+
+/* Estilo do botão de Instagram */
+.instagram-button {
+     /* Define cor de fundo como gradiente (rosa do Instagram) */
+     background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+     
+     /* Define cor do texto como branco */
+     color: #FFFFFF;
+     
+     /* Remove a decoração padrão de links */
+     text-decoration: none;
+     
+     /* Adiciona espaçamento interno */
+     padding: 15px 40px;
+     
+     /* Define tamanho da fonte */
+     font-size: 18px;
+     
+     /* Define peso da fonte */
+     font-weight: bold;
+     
+     /* Adiciona borda arredondada */
+     border-radius: 5px;
+     
+     /* Define transição suave para hover */
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     
+     /* Exibe como bloco inline para funcionar como botão */
+     display: inline-block;
+     
+     /* Adiciona sombra */
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Efeito ao passar o mouse sobre o botão de Instagram */
+.instagram-button:hover {
+     /* Aumenta o botão levemente */
+     transform: scale(1.08);
+     
+     /* Aumenta a sombra */
+     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsividade para o botão de Instagram */
+@media (max-width: 480px) {
+     /* Botão em largura total em mobile */
+     .instagram-button {
+          display: block;
+          width: 100%;
+          text-align: center;
+     }
+}

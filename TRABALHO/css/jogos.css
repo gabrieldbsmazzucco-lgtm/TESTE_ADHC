@@ -1,0 +1,1229 @@
+/* ========================================
+   ESTILOS DA PÁGINA JOGOS.HTML
+   Base compartilhada importada de estilo.css
+   ======================================== */
+@import url('./estilo.css');
+
+/* ========================================
+   ESTILOS DA PÁGINA DE JOGOS E NOTÍCIAS
+   Cores principais: Amarelo (#FFD700), Preto (#000000), Branco (#FFFFFF)
+   ======================================== */
+
+/* ========================================
+   RESET E CONFIGURAÇÕES GLOBAIS
+   ======================================== */
+
+/* Remove margens e padding padrão de todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define estilos globais para o corpo da página */
+body {
+    /* Define a fonte padrão para toda a página */
+    font-family: 'Arial', sans-serif;
+    
+    /* Define a cor de fundo como branco */
+    background-color: #FFFFFF;
+    
+    /* Define a cor do texto como preto */
+    color: #000000;
+    
+    /* Define a altura mínima para ocupar toda a viewport */
+    min-height: 100vh;
+    
+    /* Exibe o corpo como flex para organizar elementos filhos */
+    display: flex;
+    
+    /* Organiza os elementos em coluna vertical */
+    flex-direction: column;
+}
+
+/* ========================================
+   CONTAINER - CLASSE REUTILIZÁVEL
+   ======================================== */
+
+/* Container centraliza o conteúdo e define largura máxima */
+.container {
+    /* Define largura máxima do container */
+    max-width: 1200px;
+    
+    /* Centraliza o container horizontalmente */
+    margin: 0 auto;
+    
+    /* Adiciona espaçamento interno horizontal */
+    padding: 0 20px;
+    
+    /* Exibe como flex para organizar elementos filhos */
+    display: flex;
+    
+    /* Alinha elementos verticalmente ao centro */
+    align-items: center;
+    
+    /* Distribui espaço entre elementos */
+    justify-content: space-between;
+    
+    /* Define largura total */
+    width: 100%;
+}
+
+/* ========================================
+   CABEÇALHO (HEADER)
+   ======================================== */
+
+/* Estilo do cabeçalho da página */
+.header {
+    /* Define cor de fundo como preto */
+    background-color: #000000;
+    
+    /* Define cor do texto como branco */
+    color: #FFFFFF;
+    
+    /* Adiciona espaçamento interno vertical */
+    padding: 20px 0;
+    
+    /* Adiciona sombra ao cabeçalho */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo do logo (ADHC) no cabeçalho */
+.logo {
+    /* Define tamanho da fonte */
+    font-size: 28px;
+    
+    /* Define peso da fonte como bold */
+    font-weight: bold;
+    
+    /* Define cor como amarelo */
+    color: #FFD700;
+    
+    /* Remove margens padrão */
+    margin: 0;
+}
+
+/* ========================================
+   NAVEGAÇÃO (NAV)
+   ======================================== */
+
+/* Estilo da barra de navegação */
+.nav {
+    /* Exibe como flex para organizar links horizontalmente */
+    display: flex;
+    
+    /* Define espaçamento entre links */
+    gap: 30px;
+}
+
+/* Estilo dos links de navegação */
+.nav-link {
+    /* Define cor do texto como branco */
+    color: #FFFFFF;
+    
+    /* Remove a decoração padrão de links */
+    text-decoration: none;
+    
+    /* Define tamanho da fonte */
+    font-size: 16px;
+    
+    /* Define transição suave para hover */
+    transition: color 0.3s ease;
+}
+
+/* Efeito ao passar o mouse sobre links de navegação */
+.nav-link:hover {
+    /* Muda a cor para amarelo ao passar o mouse */
+    color: #FFD700;
+}
+
+/* Estilo do link ativo (página atual) */
+.nav-link.active {
+    /* Define cor como amarelo para indicar página ativa */
+    color: #FFD700;
+    
+    /* Adiciona borda inferior para destacar */
+    border-bottom: 2px solid #FFD700;
+    
+    /* Adiciona padding para espaçar a borda */
+    padding-bottom: 5px;
+}
+
+/* ========================================
+   SEÇÃO PRINCIPAL (MAIN)
+   ======================================== */
+
+/* Estilo da seção principal */
+.main {
+    /* Faz a seção crescer para ocupar espaço disponível */
+    flex: 1;
+    
+    /* Define largura total */
+    width: 100%;
+}
+
+/* ========================================
+   SEÇÃO HERO (APRESENTAÇÃO)
+   ======================================== */
+
+/* Estilo da seção hero (banner principal) */
+.hero {
+    /* Define cor de fundo como preto */
+    background-color: #000000;
+    
+    /* Define cor do texto como branco */
+    color: #FFFFFF;
+    
+    /* Define altura mínima */
+    min-height: 300px;
+    
+    /* Exibe como flex para centralizar conteúdo */
+    display: flex;
+    
+    /* Centraliza conteúdo horizontalmente */
+    justify-content: center;
+    
+    /* Centraliza conteúdo verticalmente */
+    align-items: center;
+    
+    /* Adiciona espaçamento interno */
+    padding: 60px 20px;
+}
+
+/* Estilo do conteúdo dentro da seção hero */
+.hero-content {
+    /* Exibe como flex para organizar elementos em coluna */
+    display: flex;
+    
+    /* Organiza elementos em coluna vertical */
+    flex-direction: column;
+    
+    /* Centraliza elementos horizontalmente */
+    align-items: center;
+    
+    /* Define espaçamento entre elementos */
+    gap: 20px;
+}
+
+/* Estilo do título da seção hero */
+.hero-title {
+    /* Define tamanho da fonte */
+    font-size: 48px;
+    
+    /* Define peso da fonte */
+    font-weight: bold;
+    
+    /* Define cor como amarelo */
+    color: #FFD700;
+}
+
+/* Estilo do subtítulo da seção hero */
+.hero-subtitle {
+    /* Define tamanho da fonte */
+    font-size: 24px;
+    
+    /* Define cor como branco */
+    color: #FFFFFF;
+}
+
+/* ========================================
+   SEÇÃO DE JOGOS
+   ======================================== */
+
+/* Estilo da seção de jogos */
+.games-section {
+    /* Define cor de fundo como branco */
+    background-color: #FFFFFF;
+    
+    /* Adiciona espaçamento interno vertical */
+    padding: 60px 0;
+}
+
+/* Estilo do título da seção */
+.section-title {
+    /* Define tamanho da fonte */
+    font-size: 36px;
+    
+    /* Define peso da fonte */
+    font-weight: bold;
+    
+    /* Define cor como preto */
+    color: #000000;
+    
+    /* Centraliza o texto */
+    text-align: center;
+    
+    /* Adiciona espaçamento inferior */
+    margin-bottom: 40px;
+}
+
+/* ========================================
+   GRID DE JOGOS
+   ======================================== */
+
+/* Estilo do grid de jogos */
+.games-grid {
+    /* Exibe como flex para organizar cards */
+    display: flex;
+    
+    /* Organiza cards em linha */
+    flex-direction: row;
+    
+    /* Distribui espaço entre cards */
+    justify-content: space-around;
+    
+    /* Centraliza cards verticalmente */
+    align-items: stretch;
+    
+    /* Define espaçamento entre cards */
+    gap: 30px;
+    
+    /* Faz cards quebrar em múltiplas linhas se necessário */
+    flex-wrap: wrap;
+}
+
+/* ========================================
+   CARDS DE JOGO
+   ======================================== */
+
+/* Estilo dos cards de jogo */
+.game-card {
+    /* Define largura do card */
+    width: 280px;
+    
+    /* Define cor de fundo como branco */
+    background-color: #FFFFFF;
+    
+    /* Adiciona borda */
+    border: 2px solid #FFD700;
+    
+    /* Adiciona espaçamento interno */
+    padding: 20px;
+    
+    /* Adiciona borda arredondada */
+    border-radius: 8px;
+    
+    /* Adiciona sombra ao card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    /* Define transição suave para hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* Exibe como flex para organizar elementos em coluna */
+    display: flex;
+    
+    /* Organiza elementos em coluna vertical */
+    flex-direction: column;
+    
+    /* Define espaçamento entre elementos */
+    gap: 15px;
+}
+
+/* Efeito ao passar o mouse sobre cards de jogo */
+.game-card:hover {
+    /* Aumenta o card levemente */
+    transform: translateY(-8px);
+    
+    /* Aumenta a sombra */
+    box-shadow: 0 8px 16px rgba(255, 215, 0, 0.3);
+}
+
+/* ========================================
+   DATA DO JOGO
+   ======================================== */
+
+/* Estilo do container de data */
+.game-date {
+    /* Define cor de fundo como amarelo */
+    background-color: #FFD700;
+    
+    /* Define cor do texto como preto */
+    color: #000000;
+    
+    /* Adiciona espaçamento interno */
+    padding: 10px;
+    
+    /* Adiciona borda arredondada */
+    border-radius: 8px;
+    
+    /* Exibe como flex para organizar elementos */
+    display: flex;
+    
+    /* Organiza elementos em coluna */
+    flex-direction: column;
+    
+    /* Centraliza elementos */
+    align-items: center;
+    
+    /* Define espaçamento entre elementos */
+    gap: 5px;
+}
+
+/* Estilo do dia do jogo */
+.day {
+    /* Define tamanho da fonte */
+    font-size: 28px;
+    
+    /* Define peso da fonte */
+    font-weight: bold;
+}
+
+/* Estilo do mês do jogo */
+.month {
+    /* Define tamanho da fonte */
+    font-size: 12px;
+    
+    /* Define peso da fonte */
+    font-weight: bold;
+}
+
+/* ========================================
+   INFORMAÇÕES DO JOGO
+   ======================================== */
+
+/* Estilo do container de informações do jogo */
+.game-info {
+    /* Exibe como flex para organizar elementos em coluna */
+    display: flex;
+    
+    /* Organiza elementos em coluna vertical */
+    flex-direction: column;
+    
+    /* Define espaçamento entre elementos */
+    gap: 8px;
+}
+
+/* Estilo do título do jogo */
+.game-title {
+    /* Define tamanho da fonte */
+    font-size: 18px;
+    
+    /* Define peso da fonte */
+    font-weight: bold;
+    
+    /* Define cor como preto */
+    color: #000000;
+    
+    /* Remove margens padrão */
+    margin: 0;
+}
+
+/* Estilo da hora do jogo */
+.game-time {
+    /* Define tamanho da fonte */
+    font-size: 14px;
+    
+    /* Define cor como preto */
+    color: #000000;
+    
+    /* Remove margens padrão */
+    margin: 0;
+}
+
+/* Estilo da localização do jogo */
+.game-location {
+    /* Define tamanho da fonte */
+    font-size: 14px;
+    
+    /* Define cor como preto */
+    color: #000000;
+    
+    /* Remove margens padrão */
+    margin: 0;
+}
+
+/* Estilo da categoria do jogo */
+.game-category {
+    /* Define tamanho da fonte */
+    font-size: 12px;
+    
+    /* Define cor como amarelo */
+    color: #FFD700;
+    
+    /* Remove margens padrão */
+    margin: 0;
+}
+
+/* ========================================
+   SEÇÃO DE RESULTADOS
+   ======================================== */
+
+/* Estilo da seção de resultados */
+.results-section {
+    /* Define cor de fundo como cinza claro */
+    background-color: #F5F5F5;
+    
+    /* Adiciona espaçamento interno vertical */
+    padding: 60px 0;
+}
+
+/* ========================================
+   GRID DE RESULTADOS
+   ======================================== */
+
+/* Estilo do grid de resultados */
+.results-grid {
+    /* Exibe como flex para organizar cards */
+    display: flex;
+    
+    /* Organiza cards em linha */
+    flex-direction: row;
+    
+    /* Distribui espaço entre cards */
+    justify-content: space-around;
+    
+    /* Centraliza cards verticalmente */
+    align-items: stretch;
+    
+    /* Define espaçamento entre cards */
+    gap: 30px;
+    
+    /* Faz cards quebrar em múltiplas linhas se necessário */
+    flex-wrap: wrap;
+}
+
+/* ========================================
+   CARDS DE RESULTADO
+   ======================================== */
+
+/* Estilo dos cards de resultado */
+.result-card {
+    /* Define largura do card */
+    width: 300px;
+    
+    /* Define cor de fundo como branco */
+    background-color: #FFFFFF;
+    
+    /* Adiciona borda esquerda */
+    border-left: 4px solid #FFD700;
+    
+    /* Adiciona espaçamento interno */
+    padding: 20px;
+    
+    /* Adiciona borda arredondada */
+    border-radius: 8px;
+    
+    /* Adiciona sombra ao card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    /* Define transição suave para hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito ao passar o mouse sobre cards de resultado */
+.result-card:hover {
+    /* Aumenta o card levemente */
+    transform: translateY(-5px);
+    
+    /* Aumenta a sombra */
+    box-shadow: 0 8px 16px rgba(255, 215, 0, 0.2);
+}
+
+/* Estilo da data do resultado */
+.result-date {
+    /* Define tamanho da fonte */
+    font-size: 12px;
+    
+    /* Define cor como amarelo */
+    color: #FFD700;
+    
+    /* Define peso da fonte */
+    font-weight: bold;
+    
+    /* Adiciona espaçamento inferior */
+    margin-bottom: 10px;
+}
+
+/* Estilo do título do resultado */
+.result-title {
+    /* Define tamanho da fonte */
+    font-size: 20px;
+    
+    /* Define peso da fonte */
+    font-weight: bold;
+    
+    /* Define cor como preto */
+    color: #000000;
+    
+    /* Remove margens padrão */
+    margin: 0;
+    
+    /* Adiciona espaçamento inferior */
+    margin-bottom: 8px;
+}
+
+/* Estilo da categoria do resultado */
+.result-category {
+    /* Define tamanho da fonte */
+    font-size: 12px;
+    
+    /* Define cor como preto */
+    color: #000000;
+    
+    /* Remove margens padrão */
+    margin: 0;
+    
+    /* Adiciona espaçamento inferior */
+    margin-bottom: 10px;
+}
+
+/* Estilo da descrição do resultado */
+.result-description {
+    /* Define tamanho da fonte */
+    font-size: 14px;
+    
+    /* Define cor como preto */
+    color: #000000;
+    
+    /* Remove margens padrão */
+    margin: 0;
+    
+    /* Adiciona espaçamento inferior */
+    margin-bottom: 10px;
+}
+
+/* Estilo do link de resultado */
+.result-link {
+    /* Define cor como amarelo */
+    color: #FFD700;
+    
+    /* Remove a decoração padrão de links */
+    text-decoration: none;
+    
+    /* Define tamanho da fonte */
+    font-size: 14px;
+    
+    /* Define peso da fonte */
+    font-weight: bold;
+    
+    /* Define transição suave */
+    transition: color 0.3s ease;
+}
+
+/* Efeito ao passar o mouse sobre o link */
+.result-link:hover {
+    /* Muda a cor para um amarelo mais claro */
+    color: #FFE55C;
+}
+
+/* ========================================
+   SEÇÃO DE NOTÍCIAS
+   ======================================== */
+
+/* Estilo da seção de notícias */
+.news-section {
+    /* Define cor de fundo como branco */
+    background-color: #FFFFFF;
+    
+    /* Adiciona espaçamento interno vertical */
+    padding: 60px 0;
+}
+
+/* ========================================
+   GRID DE NOTÍCIAS
+   ======================================== */
+
+/* Estilo do grid de notícias */
+.news-grid {
+    /* Exibe como flex para organizar cards */
+    display: flex;
+    
+    /* Organiza cards em linha */
+    flex-direction: row;
+    
+    /* Distribui espaço entre cards */
+    justify-content: space-around;
+    
+    /* Centraliza cards verticalmente */
+    align-items: stretch;
+    
+    /* Define espaçamento entre cards */
+    gap: 30px;
+    
+    /* Faz cards quebrar em múltiplas linhas se necessário */
+    flex-wrap: wrap;
+}
+
+/* ========================================
+   CARDS DE NOTÍCIA
+   ======================================== */
+
+/* Estilo dos cards de notícia */
+.news-card {
+    /* Define largura do card */
+    width: 280px;
+    
+    /* Define cor de fundo como branco */
+    background-color: #FFFFFF;
+    
+    /* Adiciona borda */
+    border: 2px solid #FFD700;
+    
+    /* Adiciona espaçamento interno */
+    padding: 20px;
+    
+    /* Adiciona borda arredondada */
+    border-radius: 8px;
+    
+    /* Adiciona sombra ao card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    /* Define transição suave para hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* Exibe como flex para organizar elementos em coluna */
+    display: flex;
+    
+    /* Organiza elementos em coluna vertical */
+    flex-direction: column;
+    
+    /* Define espaçamento entre elementos */
+    gap: 10px;
+}
+
+/* Efeito ao passar o mouse sobre cards de notícia */
+.news-card:hover {
+    /* Aumenta o card levemente */
+    transform: translateY(-8px);
+    
+    /* Aumenta a sombra */
+    box-shadow: 0 8px 16px rgba(255, 215, 0, 0.3);
+}
+
+/* Estilo da data da notícia */
+.news-date {
+    /* Define tamanho da fonte */
+    font-size: 12px;
+    
+    /* Define cor como amarelo */
+    color: #FFD700;
+    
+    /* Define peso da fonte */
+    font-weight: bold;
+}
+
+/* Estilo do título da notícia */
+.news-title {
+    /* Define tamanho da fonte */
+    font-size: 18px;
+    
+    /* Define peso da fonte */
+    font-weight: bold;
+    
+    /* Define cor como preto */
+    color: #000000;
+    
+    /* Remove margens padrão */
+    margin: 0;
+}
+
+/* Estilo da descrição da notícia */
+.news-description {
+    /* Define tamanho da fonte */
+    font-size: 14px;
+    
+    /* Define cor como preto */
+    color: #000000;
+    
+    /* Remove margens padrão */
+    margin: 0;
+}
+
+/* Estilo do link de notícia */
+.news-link {
+    /* Define cor como amarelo */
+    color: #FFD700;
+    
+    /* Remove a decoração padrão de links */
+    text-decoration: none;
+    
+    /* Define tamanho da fonte */
+    font-size: 14px;
+    
+    /* Define peso da fonte */
+    font-weight: bold;
+    
+    /* Define transição suave */
+    transition: color 0.3s ease;
+}
+
+/* Efeito ao passar o mouse sobre o link */
+.news-link:hover {
+    /* Muda a cor para um amarelo mais claro */
+    color: #FFE55C;
+}
+
+/* ========================================
+   RODAPÉ (FOOTER)
+   ======================================== */
+
+/* Estilo do rodapé */
+.footer {
+    /* Define cor de fundo como preto */
+    background-color: #000000;
+    
+    /* Define cor do texto como branco */
+    color: #FFFFFF;
+    
+    /* Adiciona espaçamento interno vertical */
+    padding: 20px 0;
+    
+    /* Centraliza o texto */
+    text-align: center;
+    
+    /* Adiciona borda superior */
+    border-top: 2px solid #FFD700;
+}
+
+/* Estilo do parágrafo dentro do rodapé */
+.footer p {
+    /* Define tamanho da fonte */
+    font-size: 14px;
+    
+    /* Remove margens padrão */
+    margin: 0;
+}
+
+/* ========================================
+   RESPONSIVIDADE - TELAS PEQUENAS
+   ======================================== */
+
+/* Media query para telas menores que 768px */
+@media (max-width: 768px) {
+    /* Ajusta o container para telas pequenas */
+    .container {
+        /* Organiza elementos em coluna */
+        flex-direction: column;
+        
+        /* Centraliza elementos */
+        align-items: center;
+    }
+
+    /* Ajusta o header para telas pequenas */
+    .header .container {
+        /* Organiza elementos em coluna */
+        flex-direction: column;
+        
+        /* Define espaçamento entre elementos */
+        gap: 15px;
+    }
+
+    /* Ajusta a navegação para telas pequenas */
+    .nav {
+        /* Reduz o espaçamento entre links */
+        gap: 15px;
+        
+        /* Faz os links quebrarem em múltiplas linhas */
+        flex-wrap: wrap;
+        
+        /* Centraliza os links */
+        justify-content: center;
+    }
+
+    /* Ajusta o hero para telas pequenas */
+    .hero {
+        /* Reduz a altura mínima */
+        min-height: 200px;
+        
+        /* Reduz o padding */
+        padding: 40px 20px;
+    }
+
+    /* Ajusta o título do hero para telas pequenas */
+    .hero-title {
+        /* Reduz o tamanho da fonte */
+        font-size: 32px;
+    }
+
+    /* Ajusta o subtítulo do hero para telas pequenas */
+    .hero-subtitle {
+        /* Reduz o tamanho da fonte */
+        font-size: 18px;
+    }
+
+    /* Ajusta o título da seção para telas pequenas */
+    .section-title {
+        /* Reduz o tamanho da fonte */
+        font-size: 24px;
+    }
+
+    /* Ajusta o grid de jogos para telas pequenas */
+    .games-grid {
+        /* Organiza cards em coluna */
+        flex-direction: column;
+        
+        /* Centraliza cards */
+        align-items: center;
+    }
+
+    /* Ajusta o card de jogo para telas pequenas */
+    .game-card {
+        /* Define largura total */
+        width: 100%;
+        
+        /* Define largura máxima */
+        max-width: 300px;
+    }
+
+    /* Ajusta o grid de resultados para telas pequenas */
+    .results-grid {
+        /* Organiza cards em coluna */
+        flex-direction: column;
+        
+        /* Centraliza cards */
+        align-items: center;
+    }
+
+    /* Ajusta o card de resultado para telas pequenas */
+    .result-card {
+        /* Define largura total */
+        width: 100%;
+        
+        /* Define largura máxima */
+        max-width: 300px;
+    }
+
+    /* Ajusta o grid de notícias para telas pequenas */
+    .news-grid {
+        /* Organiza cards em coluna */
+        flex-direction: column;
+        
+        /* Centraliza cards */
+        align-items: center;
+    }
+
+    /* Ajusta o card de notícia para telas pequenas */
+    .news-card {
+        /* Define largura total */
+        width: 100%;
+        
+        /* Define largura máxima */
+        max-width: 300px;
+    }
+
+    @media (max-width: 480px) {
+    .nav-link {
+        font-size: 14px;
+        padding: 6px 8px;
+    }
+
+    .hero-title {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .hero-subtitle {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .calendar-weekdays span {
+        font-size: 12px;
+    }
+
+    .calendar-day {
+        min-height: 46px;
+        font-size: 14px;
+    }
+
+    .game-details {
+        padding: 18px;
+    }
+}
+
+}
+
+/* ========================================
+   CALENDÁRIO DE JOGOS (JOGOS.HTML)
+   ======================================== */
+.games-calendar-section {
+    padding: 70px 0;
+    background-color: #f8f8f8;
+}
+
+.games-calendar-section .container {
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+
+.calendar-admin-link-wrap {
+    margin-top: -10px;
+    margin-bottom: 14px;
+}
+
+.calendar-admin-link {
+    color: #8134af;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.calendar-admin-link:hover {
+    text-decoration: underline;
+}
+
+.news-admin-link-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.news-admin-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: 2px solid #8134af;
+    background: #ffffff;
+    color: #8134af;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.news-admin-link:hover {
+    background: #8134af;
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(129, 52, 175, 0.22);
+}
+
+@media (max-width: 768px) {
+    .news-admin-link-wrap {
+        justify-content: center;
+    }
+}
+
+.news-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+
+.calendar-wrapper {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0;
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.calendar-title {
+    font-size: 30px;
+    color: #000000;
+}
+
+.calendar-nav {
+    border: none;
+    background-color: #FFD700;
+    color: #000000;
+    font-weight: bold;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.calendar-nav:hover {
+    background-color: #f0cb00;
+    transform: scale(1.05);
+}
+
+.calendar-weekdays,
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+}
+
+.calendar-weekdays span {
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+    padding-bottom: 8px;
+}
+
+.calendar-day {
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 8px;
+    min-height: 72px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.calendar-day.empty {
+    border: none;
+    background: transparent;
+    cursor: default;
+}
+
+.calendar-day.has-game {
+    border-color: #FFD700;
+    background-color: #fffbe6;
+    position: relative;
+}
+
+.calendar-day.has-game::after {
+    content: '';
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: #FFD700;
+}
+
+.calendar-day.selected {
+    background-color: #000000;
+    color: #FFFFFF;
+    border-color: #000000;
+}
+
+.game-details {
+    width: 100%;
+    max-width: 1280px;
+    margin: 30px 0 0;
+    background-color: #FFFFFF;
+    border-left: 5px solid #FFD700;
+    border-radius: 10px;
+    padding: 26px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.game-details-title {
+    margin-bottom: 12px;
+}
+
+.game-details-empty {
+    color: #555;
+}
+
+.game-details-list {
+    display: grid;
+    gap: 14px;
+}
+
+.game-details-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 14px;
+    background-color: #fcfcfc;
+}
+
+.game-details-status {
+    font-size: 13px;
+    font-weight: bold;
+    color: #9a7d00;
+    margin-bottom: 6px;
+}
+
+@media (max-width: 768px) {
+    .calendar-wrapper {
+        padding: 18px;
+    }
+
+    .calendar-title {
+        font-size: 22px;
+    }
+
+    .calendar-day {
+        min-height: 54px;
+        font-size: 16px;
+    }
+}
+
+/* ========================================
+   SEÇÃO INSTAGRAM (JOGOS.HTML)
+   ======================================== */
+.instagram-section {
+    padding: 70px 0;
+    background: linear-gradient(135deg, #fdf2ff 0%, #fff5f8 40%, #fff7eb 100%);
+}
+
+.instagram-section .container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 34px 24px;
+    box-shadow: 0 10px 25px rgba(188, 42, 141, 0.15);
+    border: 1px solid rgba(225, 48, 108, 0.2);
+}
+
+.instagram-section .section-title {
+    margin-bottom: 0;
+    font-size: 34px;
+    color: #262626;
+}
+
+.instagram-subtitle {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 700px;
+}
+
+.instagram-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 14px 26px;
+    border-radius: 999px;
+    background: linear-gradient(45deg, #f58529, #feda77, #dd2a7b, #8134af, #515bd4);
+    box-shadow: 0 8px 18px rgba(221, 42, 123, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.instagram-button:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(131, 52, 175, 0.4);
+}
+
+@media (max-width: 768px) {
+    .instagram-section {
+        padding: 50px 0;
+    }
+
+    .instagram-section .section-title {
+        font-size: 26px;
+    }
+
+    .instagram-subtitle {
+        font-size: 16px;
+    }
+
+    .instagram-button {
+        width: 100%;
+        max-width: 320px;
+    }
+}

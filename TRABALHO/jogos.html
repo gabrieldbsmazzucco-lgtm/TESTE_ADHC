@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Gabriel De Bona Sartor Mazzucco">
+    <meta name="description" content="informações e noticias sobre o time de handebol ADHC Criciúma"> 
+    <title>ADHC - Handebol Criciúma</title>
+    <!-- Favicon: Ícone do site que aparece na aba do navegador -->
+    <link rel="icon" href="img/logo_adhc.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="css/jogos.css">
+    
+</head>
+<body>
+    <!-- Cabeçalho com navegação -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">ADHC</h1>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Início</a>
+                <a href="elenco.html" class="nav-link">Elenco</a>
+                <a href="jogos.html" class="nav-link active">Jogos/Notícias</a>
+                <a href="sobre-projeto.html" class="nav-link">Sobre o Projeto</a>
+                <a href="seletiva.html" class="nav-link">Seletiva</a>
+                <a href="admin-elenco-jogadores.html" class="nav-link" data-admin-only hidden>Controle de Jogadores</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção principal com jogos e notícias -->
+    <main class="main">
+        <!-- Seção hero de jogos -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2 class="hero-title">Jogos e Notícias</h2>
+                <p class="hero-subtitle">Acompanhe os resultados e próximos compromissos do ADHC</p>
+            </div>
+        </section>
+
+        <!-- Seção de calendário de jogos -->
+        <section class="games-calendar-section">
+            <div class="container">
+                <h2 class="section-title">Calendário de Jogos</h2>
+
+                 <p class="calendar-admin-link-wrap" data-admin-only hidden>
+                    <a href="admin-calendario.html" class="calendar-admin-link">✏️ Editar calendário</a>
+                </p>
+
+                <div class="calendar-wrapper">
+                    <div class="calendar-header">
+                        <button type="button" class="calendar-nav" id="calendar-prev" aria-label="Mês anterior">←</button>
+                        <h3 class="calendar-title" id="calendar-title">Calendário</h3>
+                        <button type="button" class="calendar-nav" id="calendar-next" aria-label="Próximo mês">→</button>
+                    </div>
+
+                    <div class="calendar-weekdays">
+                        <span>Dom</span><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span>
+                    </div>
+
+                    <div class="calendar-grid" id="calendar-grid"></div>
+                </div>
+
+                <div class="game-details" id="game-details">
+                    <h3 class="game-details-title">Detalhes da partida</h3>
+                    <p class="game-details-empty">Clique em uma data marcada no calendário para ver as informações.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de notícias -->
+        <section class="news-section">
+            <div class="container">
+                <h2 class="section-title">Notícias</h2>
+                <p class="news-admin-link-wrap" data-admin-only hidden>
+                    <a href="admin-calendario.html?destino=admin-noticia-edicao.html" class="news-admin-link">📝 Editar notícias</a>
+                </p>
+                <div class="news-grid" id="news-grid">
+                    <!-- Notícia 1 -->
+                    <article class="news-card">
+                        <div class="news-date">28 Set</div>
+                        <h3 class="news-title">ADHC Conquista Título Regional</h3>
+                        <p class="news-description">O time adulto do ADHC conquistou o título do campeonato regional após uma série de vitórias impressionantes. Parabéns a todos os atletas e comissão técnica!</p>
+                        <a href="#" class="news-link">Ler mais →</a>
+                    </article>
+
+                    <!-- Notícia 2 -->
+                    <article class="news-card">
+                        <div class="news-date">15 Nov</div>
+                        <h3 class="news-title">Novos Talentos em Destaque</h3>
+                        <p class="news-description">As categorias de base do ADHC mostram grande potencial. Vários atletas sub-16 e sub-17 têm se destacado nos últimos jogos.</p>
+                        <a href="#" class="news-link">Ler mais →</a>
+                    </article>
+
+                    <!-- Notícia 3 -->
+                    <article class="news-card">
+                        <div class="news-date">12 Nov</div>
+                        <h3 class="news-title">Seletiva 2025 em Andamento</h3>
+                        <p class="news-description">A seletiva do ADHC para 2025 está em pleno andamento. Inscrições abertas para todas as categorias. Venha fazer parte do nosso time!</p>
+                        <a href="seletiva.html" class="news-link">Inscrever-se →</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- Seção de chamada para Instagram -->
+   <section class="instagram-section">
+    <section class="container">
+     <h2 class="section-title">
+      Siga Nossas Redes Sociais
+     </h2>
+     <p class="instagram-subtitle">
+      Para mais notícias, atualizações e conteúdo exclusivo, siga o nosso Instagram!
+     </p>
+     <a class="instagram-button" href="https://www.instagram.com/adhcriciuma?igsh=MWVveGl3bWNqendrcQ==" target="_blank" rel="noopener noreferrer">
+      📱 Siga nosso Instagram
+     </a>
+    </section>
+   </section>
+    </main>
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ADHC - Handebol Criciúma. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    
+    <script src="js/javascript.js"></script>
+</body>
+</html>

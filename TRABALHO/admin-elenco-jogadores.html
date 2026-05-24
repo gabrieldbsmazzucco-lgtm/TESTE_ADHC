@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADHC - Controle de Jogadores</title>
+  <link rel="icon" href="img/logo_adhc.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="css/admin-elenco-jogadores.css">
+</head>
+<body>
+  <main class="admin-main">
+    <section class="admin-card">
+      <h1>Controle de Jogadores (Admin)</h1>
+      <p>Planilha de controle do elenco. Somente admin logado pode acessar.</p>
+
+      <form id="admin-player-form" class="admin-form">
+                <label>Mês de referência
+          <select name="mesReferencia" required>
+            <option value="01">Janeiro</option>
+            <option value="02">Fevereiro</option>
+            <option value="03">Março</option>
+            <option value="04">Abril</option>
+            <option value="05">Maio</option>
+            <option value="06">Junho</option>
+            <option value="07">Julho</option>
+            <option value="08">Agosto</option>
+            <option value="09">Setembro</option>
+            <option value="10">Outubro</option>
+            <option value="11">Novembro</option>
+            <option value="12">Dezembro</option>
+          </select>
+        </label>
+        <label>Nome <input type="text" name="nome" required></label>
+        <label>Categoria <input type="text" name="categoria" required placeholder="Sub-14, Sub-16, Adulto..."></label>
+        <label>Posição <input type="text" name="posicao" required></label>
+        <label>Número <input type="number" name="numero" min="0" step="1"></label>
+        <label>Idade <input type="number" name="idade" min="1" max="99"></label>
+        <label>Status <input type="text" name="status" placeholder="Ativo, lesionado..."></label>
+        <label>Bolsa (R$) <input type="number" name="bolsa" min="0" step="0.01" placeholder="0,00"></label>
+        <label>Faltas (dias) <input type="number" name="faltas" min="0" step="1" value="0"></label>
+        <label>Desconto por falta (R$) <input type="number" name="descontoPorFalta" min="0" step="0.01" value="0"></label>
+        <label>Mensalidade faculdade (R$) <input type="number" name="mensalidade" min="0" step="0.01" placeholder="0,00"></label>
+        <button type="submit">Salvar jogador</button>
+      </form>
+
+      <div class="table-wrap">
+        <div class="admin-filter">
+          <label>Filtrar tabela por mês
+            <select id="admin-player-filter-month">
+              <option value="todos">Todos</option>
+              <option value="01">Janeiro</option>
+              <option value="02">Fevereiro</option>
+              <option value="03">Março</option>
+              <option value="04">Abril</option>
+              <option value="05">Maio</option>
+              <option value="06">Junho</option>
+              <option value="07">Julho</option>
+              <option value="08">Agosto</option>
+              <option value="09">Setembro</option>
+              <option value="10">Outubro</option>
+              <option value="11">Novembro</option>
+              <option value="12">Dezembro</option>
+            </select>
+          </label>
+        </div>
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Mês</th>
+              <th>Nome</th>
+              <th>Categoria</th>
+              <th>Posição</th>
+              <th>Número</th>
+              <th>Idade</th>
+              <th>Status</th>
+              <th>Bolsa</th>
+              <th>Faltas</th>
+              <th>Penalidade</th>
+              <th>Mensalidade</th>
+              <th>Bolsa líquida</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="admin-player-table-body"></tbody>
+        </table>
+      </div>
+
+      <div class="admin-toolbar">
+        <button id="admin-player-reset" type="button">Limpar planilha</button>
+        <button id="admin-player-logout" type="button" class="admin-logout">Sair</button>
+        <a href="elenco.html">← Voltar para Elenco</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/javascript.js"></script>
+</body>
+</html>

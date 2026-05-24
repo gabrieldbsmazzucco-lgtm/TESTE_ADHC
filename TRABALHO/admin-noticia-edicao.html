@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADHC - Edição de Notícias</title>
+      <link rel="icon" href="img/logo_adhc.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="css/admin-noticia-edicao.css">
+</head>
+<body>
+  <main class="admin-main">
+    <section class="admin-card">
+      <h1>Edição de Notícias (Jogos)</h1>
+      <p>Adicione, edite ou exclua notícias exibidas na página jogos.html.</p>
+
+      <form id="admin-news-form" class="admin-form">
+        <label>Data curta <input type="text" name="date" required placeholder="28 Set"></label>
+        <label>Título <input type="text" name="title" required placeholder="Título da notícia"></label>
+        <label>Descrição <textarea name="description" rows="4" required placeholder="Texto da notícia"></textarea></label>
+        <label>Texto do link <input type="text" name="linkText" placeholder="Ler mais →"></label>
+        <label>URL do link <input type="text" name="linkHref" placeholder="# ou seletiva.html"></label>
+        <button type="submit">Salvar notícia</button>
+      </form>
+
+      <div class="admin-toolbar">
+        <button id="admin-news-reset" type="button">Restaurar notícias padrão</button>
+        <button id="admin-news-logout" type="button" class="admin-logout" onclick="window.location.href='admin-calendario.html'">Sair</button>
+        <a href="jogos.html">← Voltar para Jogos</a>
+      </div>
+      <p class="admin-note">As notícias ficam salvas neste navegador e já aparecem em jogos.html.</p>
+
+      <section id="admin-news-list" class="admin-list"></section>
+    </section>
+  </main>
+
+  <script src="js/javascript.js"></script>
+</body>
+</html>

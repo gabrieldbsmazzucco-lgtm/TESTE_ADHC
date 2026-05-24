@@ -1,0 +1,4 @@
+adhc.netlify.app
+Credenciais padrão:
+- usuário: `admin`
+- senha: `adhc2026`

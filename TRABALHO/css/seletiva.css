@@ -1,0 +1,652 @@
+/* ========================================
+    ESTILOS DA PÁGINA SELETIVA.HTML
+    Base compartilhada importada de estilo.css
+    ======================================== */
+@import url('./estilo.css');
+
+/* ========================================
+    ESTILOS DO FORMULÁRIO - PÁGINA SELETIVA
+    Cores principais: Amarelo (#FFD700), Preto (#000000), Branco (#FFFFFF)
+    ======================================== */
+
+/* ========================================
+    RESET E CONFIGURAÇÕES GLOBAIS
+    ======================================== */
+
+/* Remove margens e padding padrão de todos os elementos */
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+/* Define estilos globais para o corpo da página */
+body {
+     /* Define a fonte padrão para toda a página */
+     font-family: 'Arial', sans-serif;
+     
+     /* Define a cor de fundo como branco */
+     background-color: #FFFFFF;
+     
+     /* Define a cor do texto como preto */
+     color: #000000;
+     
+     /* Define a altura mínima para ocupar toda a viewport */
+     min-height: 100vh;
+     
+     /* Exibe o corpo como flex para organizar elementos filhos */
+     display: flex;
+     
+     /* Organiza os elementos em coluna vertical */
+     flex-direction: column;
+}
+
+/* ========================================
+    CONTAINER - CLASSE REUTILIZÁVEL
+    ======================================== */
+
+/* Container centraliza o conteúdo e define largura máxima */
+.container {
+     /* Define largura máxima do container */
+     max-width: 1200px;
+     
+     /* Centraliza o container horizontalmente */
+     margin: 0 auto;
+     
+     /* Adiciona espaçamento interno horizontal */
+     padding: 0 20px;
+     
+     /* Exibe como flex para organizar elementos filhos */
+     display: flex;
+     
+     /* Alinha elementos verticalmente ao centro */
+     align-items: center;
+     
+     /* Distribui espaço entre elementos */
+     justify-content: space-between;
+     
+     /* Define largura total */
+     width: 100%;
+}
+
+/* ========================================
+    CABEÇALHO (HEADER)
+    ======================================== */
+
+/* Estilo do cabeçalho da página */
+.header {
+     /* Define cor de fundo como preto */
+     background-color: #000000;
+     
+     /* Define cor do texto como branco */
+     color: #FFFFFF;
+     
+     /* Adiciona espaçamento interno vertical */
+     padding: 20px 0;
+     
+     /* Adiciona sombra ao cabeçalho */
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo do logo (ADHC) no cabeçalho */
+.logo {
+     /* Define tamanho da fonte */
+     font-size: 28px;
+     
+     /* Define peso da fonte como bold */
+     font-weight: bold;
+     
+     /* Define cor como amarelo */
+     color: #FFD700;
+     
+     /* Remove margens padrão */
+     margin: 0;
+}
+
+/* ========================================
+    NAVEGAÇÃO (NAV)
+    ======================================== */
+
+/* Estilo da barra de navegação */
+.nav {
+     /* Exibe como flex para organizar links horizontalmente */
+     display: flex;
+     
+     /* Define espaçamento entre links */
+     gap: 30px;
+}
+
+/* Estilo dos links de navegação */
+.nav-link {
+     /* Define cor do texto como branco */
+     color: #FFFFFF;
+     
+     /* Remove a decoração padrão de links */
+     text-decoration: none;
+     
+     /* Define tamanho da fonte */
+     font-size: 16px;
+     
+     /* Define transição suave para hover */
+     transition: color 0.3s ease;
+}
+
+/* Efeito ao passar o mouse sobre links de navegação */
+.nav-link:hover {
+     /* Muda a cor para amarelo ao passar o mouse */
+     color: #FFD700;
+}
+
+/* Estilo do link ativo (página atual) */
+.nav-link.active {
+     /* Define cor como amarelo para indicar página ativa */
+     color: #FFD700;
+     
+     /* Adiciona borda inferior para destacar */
+     border-bottom: 2px solid #FFD700;
+     
+     /* Adiciona padding para espaçar a borda */
+     padding-bottom: 5px;
+}
+
+/* ========================================
+    SEÇÃO PRINCIPAL (MAIN)
+    ======================================== */
+
+/* Estilo da seção principal */
+.main {
+     /* Faz a seção crescer para ocupar espaço disponível */
+     flex: 1;
+     
+     /* Define largura total */
+     width: 100%;
+}
+
+/* ========================================
+    SEÇÃO DO FORMULÁRIO
+    ======================================== */
+
+/* Estilo da seção do formulário */
+.form-section {
+     /* Define cor de fundo como branco */
+     background-color: #FFFFFF;
+     
+     /* Adiciona espaçamento interno vertical */
+     padding: 60px 20px;
+}
+
+/* Estilo do container dentro da seção do formulário */
+.form-section .container {
+     /* Organiza elementos em coluna */
+     flex-direction: column;
+     
+     /* Centraliza elementos */
+     align-items: center;
+     
+     /* Define espaçamento entre elementos */
+     gap: 20px;
+}
+
+/* Estilo do logo do formulário */
+.form-logo {
+     /* Exibe como flex para centralizar a imagem */
+     display: flex;
+     
+     /* Centraliza a imagem */
+     justify-content: center;
+     
+     /* Centraliza a imagem verticalmente */
+     align-items: center;
+     
+     /* Adiciona espaçamento inferior */
+     margin-bottom: 20px;
+}
+
+/* Estilo da imagem do logo */
+.form-logo-img {
+     /* Define largura máxima da imagem */
+     max-width: 100px;
+     
+     /* Define altura automática */
+     height: auto;
+     
+     /* Define display como bloco */
+     display: block;
+}
+
+/* Estilo do título do formulário */
+.form-title {
+     /* Define tamanho da fonte */
+     font-size: 32px;
+     
+     /* Define peso da fonte */
+     font-weight: bold;
+     
+     /* Define cor como preto */
+     color: #000000;
+     
+     /* Centraliza o texto */
+     text-align: center;
+}
+
+/* Estilo do subtítulo do formulário */
+.form-subtitle {
+     /* Define tamanho da fonte */
+     font-size: 18px;
+     
+     /* Define cor como preto */
+     color: #000000;
+     
+     /* Centraliza o texto */
+     text-align: center;
+     
+     /* Adiciona espaçamento inferior */
+     margin-bottom: 30px;
+}
+
+/* ========================================
+    FORMULÁRIO
+    ======================================== */
+
+/* Estilo do formulário */
+.form {
+     /* Define largura máxima do formulário */
+     max-width: 600px;
+     
+     /* Define largura total */
+     width: 100%;
+     
+     /* Adiciona borda */
+     border: 2px solid #FFD700;
+     
+     /* Adiciona espaçamento interno */
+     padding: 40px;
+     
+     /* Adiciona borda arredondada */
+     border-radius: 8px;
+     
+     /* Adiciona sombra */
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    /* Mantém todos os campos dentro do card do formulário */
+    display: flex;
+    flex-direction: column;
+}
+
+/* ========================================
+    GRUPOS DE FORMULÁRIO
+    ======================================== */
+
+/* Estilo do grupo de formulário (agrupa label e input) */
+.form-group {
+     /* Exibe como flex para organizar elementos em coluna */
+     display: flex;
+     
+     /* Organiza elementos em coluna vertical */
+     flex-direction: column;
+     
+     /* Define espaçamento entre elementos */
+     gap: 8px;
+     
+     /* Adiciona espaçamento inferior */
+     margin-bottom: 20px;
+}
+
+/* Estilo do grupo de checkbox */
+.checkbox-group {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 10px;
+    row-gap: 8px;
+    align-items: start;
+    width: 100%;
+}
+
+/* ========================================
+    LABELS
+    ======================================== */
+
+/* Estilo do label do formulário */
+.form-label {
+     /* Define tamanho da fonte */
+     font-size: 16px;
+     
+     /* Define peso da fonte */
+     font-weight: bold;
+     
+     /* Define cor como preto */
+     color: #000000;
+}
+
+.form-help {
+    display: block;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #666666;
+}
+
+/* Estilo do label do checkbox */
+.checkbox-label {
+     /* Define tamanho da fonte */
+     font-size: 14px;
+     
+     /* Define cor como preto */
+     color: #000000;
+     
+     /* Permite que o label cresça para ocupar espaço disponível */
+     flex: 1;
+}
+
+/* ========================================
+    INPUTS E TEXTAREAS
+    ======================================== */
+
+/* Estilo dos inputs de texto e selects */
+.form-input {
+     /* Define tamanho da fonte */
+     font-size: 16px;
+     
+     /* Adiciona espaçamento interno */
+     padding: 12px;
+     
+     /* Adiciona borda */
+     border: 1px solid #000000;
+     
+     /* Adiciona borda arredondada */
+     border-radius: 4px;
+     
+     /* Define cor de fundo como branco */
+     background-color: #FFFFFF;
+     
+     /* Define cor do texto como preto */
+     color: #000000;
+     
+     /* Define transição suave para focus */
+     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito ao focar no input */
+.form-input:focus {
+     /* Remove o outline padrão do navegador */
+     outline: none;
+     
+     /* Muda a cor da borda para amarelo */
+     border-color: #FFD700;
+     
+     /* Adiciona sombra ao input */
+     box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+/* Estilo do textarea */
+.form-textarea {
+     /* Define tamanho da fonte */
+     font-size: 16px;
+     
+     /* Adiciona espaçamento interno */
+     padding: 12px;
+     
+     /* Adiciona borda */
+     border: 1px solid #000000;
+     
+     /* Adiciona borda arredondada */
+     border-radius: 4px;
+     
+     /* Define cor de fundo como branco */
+     background-color: #FFFFFF;
+     
+     /* Define cor do texto como preto */
+     color: #000000;
+     
+     /* Define altura padrão */
+     min-height: 120px;
+     
+     /* Define transição suave para focus */
+     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+     
+     /* Permite redimensionar o textarea apenas verticalmente */
+     resize: vertical;
+}
+
+/* Efeito ao focar no textarea */
+.form-textarea:focus {
+     /* Remove o outline padrão do navegador */
+     outline: none;
+     
+     /* Muda a cor da borda para amarelo */
+     border-color: #FFD700;
+     
+     /* Adiciona sombra ao textarea */
+     box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+/* ========================================
+    CHECKBOX
+    ======================================== */
+
+/* Estilo do checkbox */
+.form-checkbox {
+     /* Define tamanho do checkbox */
+     width: 20px;
+     height: 20px;
+     
+     /* Define cursor como pointer */
+     cursor: pointer;
+      margin-top: 2px;
+}
+
+.checkbox-group .error-message {
+    grid-column: 1 / -1;
+    min-height: 0;
+}
+
+/* ========================================
+    BOTÃO DE ENVIO
+    ======================================== */
+
+/* Estilo do botão de envio */
+.form-button {
+     /* Define cor de fundo como amarelo */
+     background-color: #FFD700;
+     
+     /* Define cor do texto como preto */
+     color: #000000;
+     
+     /* Define tamanho da fonte */
+     font-size: 18px;
+     
+     /* Define peso da fonte */
+     font-weight: bold;
+     
+     /* Adiciona espaçamento interno */
+     padding: 15px 40px;
+     
+     /* Adiciona borda arredondada */
+     border-radius: 5px;
+     
+     /* Remove borda padrão */
+     border: none;
+     
+     /* Define cursor como pointer */
+     cursor: pointer;
+     
+     /* Define largura total */
+     width: 100%;
+     
+     /* Define transição suave para hover */
+     transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+.form-button:hover {
+     /* Muda a cor de fundo para um tom mais escuro de amarelo */
+     background-color: #FFC700;
+     
+     /* Aumenta o botão levemente */
+     transform: scale(1.02);
+}
+
+/* Efeito ao clicar no botão */
+.form-button:active {
+     /* Reduz o botão levemente */
+     transform: scale(0.98);
+}
+
+/* ========================================
+    MENSAGENS DE ERRO
+    ======================================== */
+
+/* Estilo da mensagem de erro */
+.error-message {
+     /* Define tamanho da fonte */
+     font-size: 12px;
+     
+     /* Define cor como vermelho */
+     color: #FF0000;
+     
+     /* Define altura mínima para evitar layout shift */
+     min-height: 16px;
+}
+
+/* ========================================
+    MENSAGEM DE SUCESSO
+    ======================================== */
+
+/* Estilo da mensagem de sucesso */
+.success-message {
+     /* Define cor de fundo como verde claro */
+     background-color: #E8F5E9;
+     
+     /* Adiciona borda */
+     border: 2px solid #4CAF50;
+     
+     /* Adiciona espaçamento interno */
+     padding: 15px;
+     
+     /* Adiciona borda arredondada */
+     border-radius: 4px;
+     
+     /* Centraliza o texto */
+     text-align: center;
+     
+     /* Adiciona espaçamento superior */
+     margin-top: 20px;
+     
+     /* Define transição suave para aparecer */
+     animation: slideDown 0.3s ease;
+}
+
+/* Estilo do parágrafo dentro da mensagem de sucesso */
+.success-message p {
+     /* Define cor como verde escuro */
+     color: #4CAF50;
+     
+     /* Define tamanho da fonte */
+     font-size: 16px;
+     
+     /* Remove margens padrão */
+     margin: 0;
+}
+
+/* ========================================
+    ANIMAÇÕES
+    ======================================== */
+
+/* Animação de deslizar para baixo */
+@keyframes slideDown {
+     /* Estado inicial da animação */
+     from {
+          /* Define opacidade como 0 (invisível) */
+          opacity: 0;
+          
+          /* Define posição inicial acima */
+          transform: translateY(-20px);
+     }
+     
+     /* Estado final da animação */
+     to {
+          /* Define opacidade como 1 (visível) */
+          opacity: 1;
+          
+          /* Define posição final no lugar correto */
+          transform: translateY(0);
+     }
+}
+
+/* ========================================
+    RESPONSIVIDADE - TELAS PEQUENAS
+    ======================================== */
+
+/* Media query para telas menores que 768px */
+@media (max-width: 768px) {
+     /* Ajusta o container para telas pequenas */
+     .container {
+          /* Organiza elementos em coluna */
+          flex-direction: column;
+          
+          /* Centraliza elementos */
+          align-items: center;
+     }
+
+     /* Ajusta o header para telas pequenas */
+     .header .container {
+          /* Organiza elementos em coluna */
+          flex-direction: column;
+          
+          /* Define espaçamento entre elementos */
+          gap: 15px;
+     }
+
+     /* Ajusta a navegação para telas pequenas */
+     .nav {
+          /* Reduz o espaçamento entre links */
+          gap: 15px;
+     }
+
+     /* Ajusta o formulário para telas pequenas */
+     .form {
+          /* Reduz o padding */
+          padding: 20px;
+     }
+
+     /* Ajusta o título do formulário para telas pequenas */
+     .form-title {
+          /* Reduz o tamanho da fonte */
+          font-size: 24px;
+     }
+
+     /* Ajusta o subtítulo do formulário para telas pequenas */
+     .form-subtitle {
+          /* Reduz o tamanho da fonte */
+          font-size: 16px;
+     }
+
+     /* Ajusta o grupo de checkbox para telas pequenas */
+     .checkbox-group {
+    grid-template-columns: 1fr;
+     }
+     
+}
+@media (max-width: 480px) {
+    .nav-link {
+        font-size: 14px;
+        padding: 6px 8px;
+    }
+
+    .form-section {
+        padding: 34px 0;
+    }
+
+    .form-title {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .form-subtitle {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .form-button {
+        width: 100%;
+    }
+}

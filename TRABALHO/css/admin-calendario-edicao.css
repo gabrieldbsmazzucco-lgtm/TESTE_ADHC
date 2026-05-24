@@ -1,0 +1,142 @@
+@import url('./admin-calendario-base.css');
+
+.admin-form {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.admin-form label {
+  font-size: 14px;
+  font-weight: bold;
+  display: grid;
+  gap: 6px;
+}
+
+.admin-form input,
+.admin-form textarea,
+.admin-form button,
+.admin-toolbar button {
+  font: inherit;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.admin-form button,
+.admin-toolbar button {
+  cursor: pointer;
+  border: none;
+  background: #ffd700;
+  font-weight: bold;
+}
+
+.admin-logout {
+  background: #ef5350 !important;
+  color: #fff;
+}
+
+.admin-preview {
+  border: 1px solid #ececec;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 18px;
+  background: #fffef5;
+}
+
+.admin-preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.admin-preview-header button {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  background: #ffd700;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.admin-preview-header h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.admin-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.admin-preview-day {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  min-height: 34px;
+  cursor: pointer;
+}
+
+.admin-preview-day.has-game {
+  background: #fff2ad;
+  border-color: #f5c400;
+}
+
+.admin-preview-day.selected {
+  outline: 2px solid #8134af;
+}
+
+.admin-preview-day.empty {
+  visibility: hidden;
+}
+
+.admin-preview-details {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.admin-list {
+  display: grid;
+  gap: 12px;
+}
+
+.admin-item {
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  padding: 12px;
+  background: #fafafa;
+}
+
+.admin-item h4 {
+  margin: 0 0 8px;
+}
+
+.admin-item p {
+  margin: 6px 0;
+}
+
+.admin-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.admin-actions button {
+  border: none;
+  border-radius: 6px;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.admin-actions button[data-action="edit"] {
+  background: #ffd700;
+}
+
+.admin-actions button[data-action="delete"] {
+  background: #f44336;
+  color: #fff;
+}

@@ -1,0 +1,101 @@
+/* ========================================
+   ESTILOS BASE COMPARTILHADOS
+   Animações e utilitários usados em múltiplas páginas
+   ======================================== */
+
+/* ========================================
+   NOVAS ANIMAÇÕES CSS OTIMIZADAS (IMPLEMENTAÇÃO CORRIGIDA)
+   ======================================== */
+
+/* 1. Efeito de Pulso (Pulse Effect) */
+.pulse {
+    animation: pulse-animation 1.5s infinite;
+}
+
+@keyframes pulse-animation {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 15px rgba(255, 215, 0, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
+    }
+}
+
+/* 2. Efeito de Deslize Lateral (Slide-In Effect) - CORRIGIDO E OTIMIZADO */
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.6s ease-out, transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slide-in-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* 3. Efeito de Rotação Suave (Spin Effect) */
+.spin-on-hover {
+    transition: transform 0.5s ease-in-out;
+}
+
+.spin-on-hover:hover {
+    transform: rotate(360deg);
+}
+
+/* 4. Efeito de Brilho (Glow Effect) */
+.glow-text {
+    transition: text-shadow 0.3s ease;
+}
+
+.glow-text:hover {
+    text-shadow: 0 0 8px #FFD700, 0 0 15px #FFD700;
+}
+
+/* ========================================
+   UTILITÁRIOS DE ANIMAÇÃO (JS)
+   ======================================== */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cta-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.button-ripple {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    transform: translate(-50%, -50%);
+    animation: ripple-expand 0.6s ease-out;
+}
+
+@keyframes ripple-expand {
+    from {
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    to {
+        width: 280px;
+        height: 280px;
+        opacity: 0;
+    }
+}

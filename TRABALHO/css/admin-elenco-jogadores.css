@@ -1,0 +1,61 @@
+@import url('./admin-calendario-base.css');
+
+.admin-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  margin: 14px 0 18px;
+}
+
+.admin-form label {
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.admin-form input,
+.admin-form button {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.admin-form button {
+  border: none;
+  background: #ffd700;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.table-wrap { overflow-x: auto; }
+.admin-filter {
+  margin: 0 0 10px;
+}
+.admin-filter label {
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-grid;
+  gap: 6px;
+}
+.admin-filter select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+.admin-table { width: 100%; border-collapse: collapse; background: #fff; }
+.admin-table th, .admin-table td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+.admin-table th { background: #f5f5f5; }
+
+.admin-table button {
+  border: none;
+  border-radius: 6px;
+  padding: 6px 8px;
+  cursor: pointer;
+  margin-right: 4px;
+}
+
+.admin-table button[data-action="edit"] { background: #ffd700; }
+.admin-table button[data-action="delete"] { background: #f44336; color: #fff; }
+
+.admin-logout { background: #ef5350 !important; color: #fff; }

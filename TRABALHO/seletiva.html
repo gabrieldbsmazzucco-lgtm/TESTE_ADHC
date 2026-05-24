@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Gabriel De Bona Sartor Mazzucco">
+    <meta name="description" content="informações e noticias sobre o time de handebol ADHC Criciúma"> 
+    <title>ADHC - Handebol Criciúma</title>
+    <!-- Favicon: Ícone do site que aparece na aba do navegador -->
+    <link rel="icon" href="img/logo_adhc.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="css/seletiva.css">
+    
+</head>
+<body>
+    <!-- Cabeçalho com navegação -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">ADHC</h1>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Início</a>
+                <a href="elenco.html" class="nav-link">Elenco</a>
+                <a href="jogos.html" class="nav-link">Jogos/Notícias</a>
+                <a href="sobre-projeto.html" class="nav-link">Sobre o Projeto</a>
+                <a href="seletiva.html" class="nav-link active">Seletiva</a>
+                 <a href="admin-elenco-jogadores.html" class="nav-link" data-admin-only hidden>Controle de Jogadores</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção principal com formulário -->
+    <main class="main">
+        <section class="form-section">
+            <div class="container">
+                <div class="form-logo">
+                    <img src="img/logo_adhc.jpg" alt="Logo ADHC" class="form-logo-img">
+                </div>
+                <h2 class="form-title">Inscrição na Seletiva ADHC</h2>
+                <p class="form-subtitle">Preencha o formulário abaixo para se inscrever na seletiva</p>
+
+                <!-- Formulário de inscrição -->
+                <!-- Atributo action: URL do Formspree para enviar dados -->
+                <!-- Atributo method: POST envia os dados de forma segura -->
+               <form 
+                    id="seletiva-form" 
+                    class="form" 
+                    action="https://formspree.io/f/xpqkeyny" 
+                    method="POST" 
+                    enctype="multipart/form-data" 
+                    novalidate="novalidate"
+                >
+                    <!-- Campo de nome -->
+                    <div class="form-group">
+                        <label for="nome" class="form-label">Nome Completo *</label>
+                        <input 
+                            type="text" 
+                            id="nome" 
+                            name="nome" 
+                            class="form-input" 
+                            placeholder="Digite seu nome completo"
+                        >
+                        <span class="error-message" id="erro-nome"></span>
+                    </div>
+
+                    <!-- Campo de email -->
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email *</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            class="form-input" 
+                            placeholder="seu.email@exemplo.com"
+                        >
+                        <span class="error-message" id="erro-email"></span>
+                    </div>
+
+                    <!-- Campo de telefone -->
+                    <div class="form-group">
+                        <label for="telefone" class="form-label">Telefone *</label>
+                        <input 
+                            type="tel" 
+                            id="telefone" 
+                            name="telefone" 
+                            class="form-input" 
+                            placeholder="(XX) XXXXX-XXXX"
+                        >
+                        <span class="error-message" id="erro-telefone"></span>
+                    </div>
+
+                    <!-- Campo de idade -->
+                    <div class="form-group">
+                        <label for="idade" class="form-label">Idade *</label>
+                        <input 
+                            type="number" 
+                            id="idade" 
+                            name="idade" 
+                            class="form-input" 
+                            placeholder="Digite sua idade"
+                            min="1"
+                            max="120"
+                        >
+                        <span class="error-message" id="erro-idade"></span>
+                    </div>
+
+                    <!-- Campo de posição -->
+                    <div class="form-group">
+                        <label for="posicao" class="form-label">Posição no Handebol *</label>
+                        <select id="posicao" name="posicao" class="form-input">
+                            <option value="">Selecione uma posição</option>
+                            <option value="goleiro">Goleiro</option>
+                            <option value="lateral-esquerdo">Armador Esquerdo</option>
+                            <option value="lateral-direito">Armador Direito</option>
+                            <option value="pivo">Pivô</option>
+                            <option value="ala-esquerdo">Ponta Esquerdo</option>
+                            <option value="ala-direito">Ponta Direito</option>
+                            <option value="nao-tenho-experiencia">Não tenho experiência</option>
+                        </select>
+                        <span class="error-message" id="erro-posicao"></span>
+                    </div>
+
+                    <!-- Campo de experiência -->
+                    <div class="form-group">
+                        <label for="experiencia" class="form-label">Experiência em Handebol *</label>
+                        <select id="experiencia" name="experiencia" class="form-input">
+                            <option value="">Selecione uma opção</option>
+                            <option value="iniciante">Iniciante</option>
+                            <option value="intermediario">Intermediário</option>
+                            <option value="avancado">Avançado</option>
+                        </select>
+                        <span class="error-message" id="erro-experiencia"></span>
+                    </div>
+
+                    <!-- Campo de mensagem -->
+                    <div class="form-group">
+                        <label for="mensagem" class="form-label">Mensagem (Opcional)</label>
+                        <textarea 
+                            id="mensagem" 
+                            name="mensagem" 
+                            class="form-textarea" 
+                            placeholder="Conte-nos mais sobre você..."
+                            rows="4"
+                        ></textarea>
+                    </div>
+
+                    <!-- Campo de vídeo -->
+                    <div class="form-group">
+                        <label for="video" class="form-label">Vídeo de apresentação (Opcional)</label>
+                        <input 
+                            type="file" 
+                            id="video" 
+                            name="video" 
+                            class="form-input" 
+                            accept="video/*"
+                        >
+                        <small class="form-help">Envie um vídeo de aproximadamente 2 a 3 minutos (máx. 80MB).</small>
+                        <span class="error-message" id="erro-video"></span>
+                    </div>
+
+                    <!-- Checkbox de termos -->
+                    <div class="form-group checkbox-group">
+                        <input 
+                            type="checkbox" 
+                            id="termos" 
+                            name="termos" 
+                            class="form-checkbox"
+                        >
+                        <label for="termos" class="checkbox-label">Concordo com os termos e condições *</label>
+                        <span class="error-message" id="erro-termos"></span>
+                    </div>
+
+                    <!-- Botão de envio -->
+                    <button type="submit" class="form-button">Enviar Inscrição</button>
+
+                    <!-- Mensagem de sucesso -->
+                    <div id="success-message" class="success-message" style="display: none;">
+                        <p>✓ Inscrição enviada com sucesso! Obrigado por se inscrever no ADHC.</p>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ADHC - Handebol Criciúma. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    
+    <script src="js/javascript.js"></script>
+</body>
+</html>

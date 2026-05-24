@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADHC - Edição do Calendário</title>
+      <link rel="icon" href="img/logo_adhc.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="css/admin-calendario-edicao.css">
+</head>
+<body>
+  <main class="admin-main">
+    <section class="admin-card">
+      <h1>Edição do Calendário</h1>
+      <p>Gerencie as partidas cadastradas abaixo.</p>
+
+      <section id="admin-editor">
+        <form id="admin-calendar-form" class="admin-form">
+          <label>Data <input type="date" name="date" required></label>
+          <label>Título <input type="text" name="title" required placeholder="ADHC vs Equipe"></label>
+          <label>Horário <input type="text" name="time" placeholder="11:00"></label>
+          <label>Local <input type="text" name="location" placeholder="Ginásio"></label>
+          <label>Categoria <input type="text" name="category" placeholder="Adulto"></label>
+          <label>Status <input type="text" name="status" placeholder="Próximo jogo"></label>
+          <label>Descrição <textarea name="description" rows="3" placeholder="Opcional"></textarea></label>
+          <button type="submit">Salvar partida</button>
+        </form>
+
+        <div class="admin-toolbar">
+          <button id="admin-calendar-reset" type="button">Restaurar partidas padrão</button>
+          <button id="admin-logout" type="button" class="admin-logout" onclick="window.location.href='admin-calendario.html'">Sair</button>
+          <a href="jogos.html">← Voltar para Jogos</a>
+        </div>
+        <p class="admin-note">
+          As alterações são salvas no backend para todos os visitantes.
+        </p>
+
+        <section class="admin-preview" aria-label="Pré-visualização do calendário">
+          <div class="admin-preview-header">
+            <button id="admin-preview-prev" type="button">←</button>
+            <h3 id="admin-preview-title">Calendário</h3>
+            <button id="admin-preview-next" type="button">→</button>
+          </div>
+          <div id="admin-preview-grid" class="admin-preview-grid"></div>
+          <div id="admin-preview-details" class="admin-preview-details"></div>
+        </section>
+
+        <section id="admin-calendar-list" class="admin-list"></section>
+      </section>
+    </section>
+  </main>
+<script>
+    (function validarSessaoLocal() {
+      const sessao = sessionStorage.getItem('adhc_admin_session');
+      if (!sessao) {
+console.warn('Sessão admin não encontrada. Acesso liberado no modo local.');
+      }
+    })();
+  </script>
+  <script src="js/javascript.js"></script>
+</body>
+</html>
